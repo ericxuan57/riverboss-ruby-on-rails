@@ -35,7 +35,7 @@ gem 'jquery-rails'
 gem 'jquery-turbolinks'
 
 # Provide Jquery UI functionality
-gem 'jquery-ui-rails'
+gem 'jquery-ui-rails', '~> 5.0.5'
 
 # Pagination Gem
 gem 'kaminari'
