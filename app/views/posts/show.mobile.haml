@@ -1,0 +1,23 @@
+:ruby
+  url         = post_url(@post)
+  title       = "#{@post.title} | RiverBoss"
+  description = @post.meta_description
+  keywords    = @post.meta_keywords
+
+  set_meta_tags(description: description,
+    keywords: keywords,
+    title: title,
+    twitter: { card: "summary", site: "@riverboss", url: url, title: title, description: description },
+    og: { title: title, url: url, type: "website", description: description, site_name: "RiverBoss" },
+    canonical: url)
+
+%section#content
+  .content-holder
+    %h1= @post.title
+
+  .gen-pad
+    .post
+      .post-content= @post.content.html_safe
+      .created-date
+        Created at
+        = l @post.created_at, format: :blog_date

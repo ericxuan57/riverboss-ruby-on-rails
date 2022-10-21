@@ -1,0 +1,5 @@
+%form.search-form#search_form{action: search_rivers_path}
+  %fieldset
+    = text_field_tag :q, params[:q], placeholder: "search rivers", type: "search", class: "river-autocomplete-mobile", id: "search_input_field_mobile", data: {url: autocomplete_rivers_url}
+    = submit_tag "Go", name: nil, class: "btn"
+    %span.spinner

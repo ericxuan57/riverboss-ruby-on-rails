@@ -1,0 +1,116 @@
+:ruby
+  current_condition = @river.weather.present? ? @river.weather["current_condition"] : nil
+  forecast = @river.weather.present? ? @river.weather["forecast"] : nil
+  url         = river_url(@river)
+  title       = "#{@river.name} | RiverBoss"
+  description = "Get river conditions for #{@river.name}"
+  keywords    = "#{@river.name},rivers,flow,conditions,fishing,report,river,gauge,CFS,weather,radar,forecast"
+
+  set_meta_tags(description: description,
+    keywords: keywords,
+    title: title,
+    twitter: { card: "summary", site: "@riverboss", url: url, title: title, description: description },
+    og: { title: title, url: url, type: "website", description: description, site_name: "RiverBoss" },
+    canonical: url)
+
+%section#content.inner
+  .content-holder
+    .btn-holder.more-pad
+      - if user_signed_in?
+        - unless current_user.rivers.pluck(:id).include? @river.id
+          %form{action: users_rivers_path, method: :post}
+            = hidden_field_tag :river_id, @river.id
+            = hidden_field_tag :authenticity_token, form_authenticity_token
+            .form-actions= submit_tag "Save to my Rivers"
+        - else
+          = link_to "Edit", users_rivers_path, class: "btn auto"
+      - else
+        = link_to "Save to my Rivers", new_user_session_path(redirect_to: url), class: "btn auto"
+
+    %h1= @river.name_short
+    %span.place= "#{@river.city}, #{@river.state.code}"
+
+    %span.image-holder= image_tag "https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=#{@river.site_no}&parm_cd=00060&period=7", alt: "Not Found"
+
+  %table
+    %thead
+      %tr
+        %th.col1 CFS
+        %th.col2
+          %span.indicate= check_nil @river.discharge
+    %tbody
+      %tr
+        %td.col1 Condition
+        %td.col2= find_discharge_status @river, "show", true
+      %tr
+        %td.col1 Gauge Height
+        %td.col2= check_nil @river.gauge_height, "ft"
+      %tr
+        %td.col1 Temperature
+        %td.col2= check_nil @river.water_temp, "°F"
+      %tr
+        %td.col1 Turbidity
+        %td.col2= check_nil @river.turbidity, "FNU"
+
+  - if forecast.present? && forecast.any?
+    .tempreture
+      %header.header
+        %span.size Weather in
+        %h2= "#{@river.city}, #{@river.state.code}"
+      .tempreture-holder
+        .block
+          .right
+            %span.degree
+              = check_nil current_condition["temperature"]
+              %span.degrees-f
+                °F
+                = image_tag "weather-icons/#{current_condition["icon"]}"
+          %span.time Now
+    %table.weather-record
+      %tbody
+        %tr
+          %td.col1 Wind
+          %td.col2
+            %span.indicator= check_nil current_condition["wind"]
+        %tr
+          %td.col1 Pressure
+          %td.col2= check_nil current_condition["pressure"], "in", true
+        %tr
+          %td.col1 Humidity
+          %td.col2= check_nil current_condition["humidity"], "%"
+        %tr.sunrise-sunset{data: {location: "#{@river.city} #{@river.state.name}"}}
+          %td.col1 Sunrise / Sunset
+          %td.col2
+            %span.sunrise -
+            = "/"
+            %span.sunset -
+    .geo
+      %h2 Regional Radar
+      %span.image-holder
+        = image_tag @river.state.radar_image, class: "rader-img" if @river.state.radar_image
+
+      %span.size Forecast for
+      %h3= "#{@river.city}, #{@river.state.code}"
+    %table.table
+      %thead
+        %tr
+          %th.col1 Day
+          %th.col2 Forecast
+      %tbody.accordion
+        - forecast.each do |k,v|
+          %tr
+            %td{:colspan => "2"}
+              %table.weather-forecast
+                %tr
+                  %td.col1
+                    %a.open{:href => "#"}= k
+                  %td.col2
+                    .temprature
+                      %span.color>
+                        = image_tag "weather-icons/#{v["icon"]}" if v.present?
+                        = v["temperature"]
+                        °F
+                      %span.title= v["short_description"]
+              .slide= v["long_description"]
+  - else
+    %h2 Sorry no weather information is available for this river's location.

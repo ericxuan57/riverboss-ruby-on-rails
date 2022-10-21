@@ -1,0 +1,50 @@
+.nav-holder
+  .header
+    %a.opener{:href => "#"}
+    %strong.logo
+      = image_tag "mobile/logo.png", alt: "RIVERBOSS", height: 17, width: 199
+  .drop
+    %nav#nav
+      %ul
+        - if user_signed_in?
+          %li= link_to "My Rivers", rivers_path
+          %li= link_to "Manage My Rivers", users_rivers_path
+          %li= link_to "Rivers Near Me", near_by_rivers_path
+          %li= link_to "Search Rivers", search_rivers_path
+          %li= link_to "Popular", popular_rivers_path
+          %li= link_to "Regions", regions_path
+          %li= link_to "States", states_path
+          %li= link_to "Default Conditions", default_conditions_rivers_path
+          %li= link_to "Suggest / Contribute", suggest_path
+          %li= link_to "News & Updates", posts_path
+          %li= link_to "Advertise", contact_path
+          %li= link_to "My Account", edit_user_registration_path
+          %li= link_to "Contact", contact_path
+          %li= link_to "Disclaimer", "/pages/disclaimer"
+          %li= link_to "Logout", destroy_user_session_path, method: :delete
+        - else
+          %li= link_to "Sign Up / Login", new_user_session_path(redirect_to: params[:redirect_to])
+          %li= link_to "My Rivers", new_user_session_path(redirect_to: rivers_path)
+          %li= link_to "Manage My Rivers", new_user_session_path(redirect_to: users_rivers_path)
+          %li= link_to "Rivers Near Me", near_by_rivers_path
+          %li= link_to "Search Rivers", search_rivers_path
+          %li= link_to "Popular", popular_rivers_path
+          %li= link_to "Regions", regions_path
+          %li= link_to "States", states_path
+          %li= link_to "Default Conditions", default_conditions_rivers_path
+          %li= link_to "Suggest / Contribute", suggest_path
+          %li= link_to "News & Updates", posts_path
+          %li= link_to "Advertise", contact_path
+          %li= link_to "My Account", new_user_session_path(redirect_to: edit_user_registration_path)
+          %li= link_to "Contact", contact_path
+          %li= link_to "Disclaimer", "/pages/disclaimer"
+
+    %ul.social-media
+      %li
+        = link_to "Twitter", "https://twitter.com/riverboss", class: :twitter
+        %span Twitter
+      %li
+        = link_to "Facebook", "https://facebook.com/riverboss", class: :facebook
+        %span Facebook
+      %li
+        %a.opener{:href => "#"} Close

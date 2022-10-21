@@ -1,0 +1,64 @@
+!!!
+%html
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1.0 ", :name => "viewport"}/
+    = display_meta_tags
+    = render "layouts/favicons"
+    = stylesheet_link_tag "mobile/application", media: "all", "data-turbolinks-track" => true
+    = csrf_meta_tags
+    = stylesheet_link_tag "https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700", "data-turbolinks-track" => true, media: "all"
+    = javascript_include_tag "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", async: true, "data-ad-client" => "ca-pub-9646142879731590"
+    /[if lt IE 9]
+      = javascript_include_tag "html5shiv", "data-turbolinks-track" => true
+
+  %body
+    #wrapper
+
+      %header#header
+        %a.opener{:href => "#"}
+          %span
+
+        %strong.logo
+          = link_to root_path do
+            = image_tag "mobile/logo.png", alt: "RIVERBOSS", height: 17, width: 199
+
+        .image-holder
+          = link_to search_rivers_path do
+            = image_tag "mobile/magnifier-2x.jpg", alt: "image description", height: 49, width: 49
+
+        = render "layouts/mobile_nav"
+
+      %main#main{:role => "main"}
+        = render "layouts/flashes"
+        = yield
+
+        .links
+          = link_to "Classic View", "/html_view"
+          = link_to "Disclaimer", "/pages/disclaimer"
+          %p.footer-text Copyright #{Date.today.year} RiverBoss.Com
+
+      %footer#footer
+        %ins.adsbygoogle{"data-ad-client" => "ca-pub-9646142879731590", "data-ad-format" => "auto", "data-ad-slot" => "6829413466", :style => "display:block"}
+        :javascript
+          (adsbygoogle = window.adsbygoogle || []).push({});
+
+    .page-loading
+    .modal
+      .inner-modal
+        #modal_content
+      #modal_close
+
+    = image_tag "na.png", style: "display: none;", id: :not_available
+
+    = javascript_include_tag "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-530b4e5e44532e57"
+    = javascript_include_tag "mobile/application", "data-turbolinks-track" => true
+
+    - if Rails.env.production?
+      :javascript
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-20872318-1', 'auto');
+        ga('send', 'pageview');

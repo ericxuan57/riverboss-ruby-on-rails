@@ -1,0 +1,7 @@
+- if flash[:notice]
+  .alert.alert-success
+    = flash[:notice]
+
+- if flash[:error] || flash[:alert]
+  .alert.alert-error
+    = flash[:error] || flash[:alert]

@@ -1,0 +1,53 @@
+- rivers ||= @rivers
+- no_pagination ||= false
+- tomorrow = Date.tomorrow
+- next_next_day = Date.tomorrow + 1.day
+
+- if rivers.any?
+  %table.table.river-table
+    %thead
+      %tr
+        %th.col1 River/Stream
+        %th.col2 CFS
+        %th.col3 Ht
+        %th.col4 °F
+        %th.col5 Cond
+        %th.col6 Now
+        %th.col7= tomorrow.strftime("%a")
+        %th.col8= next_next_day.strftime("%a")
+        %th.col9 Sr/Ss
+    %tbody
+      - rivers.each do |r|
+        - current_condition = r.weather["current_condition"] if r.weather.present?
+        - forecast          = r.weather["forecast"] if r.weather.present?
+        - tom_mor_forecast = forecast[tomorrow.strftime("%A")] if forecast.present?
+        - tom_nig_forecast = forecast[tomorrow.strftime("%A") + " Night"] if forecast.present?
+        - nex_mor_forecast = forecast[next_next_day.strftime("%A")] if forecast.present?
+        - nex_nig_forecast = forecast[next_next_day.strftime("%A") + " Night"] if forecast.present?
+        %tr.sunrise-sunset{data: {location: "#{r.city} #{r.state.name}"}}
+          %td.col1
+            = link_to r.name_short, river_path(r), class: "river-graph-show"
+            .river-graph= image_tag "https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=#{r.site_no}&parm_cd=00060&period=7", width: 576, alt: "Not Found"
+          %td.col2= check_nil r.discharge
+          %td.col3= check_nil r.gauge_height.to_f.round(1)
+          %td.col4= check_nil r.water_temp
+          = find_discharge_status r
+          %td.col6
+            = image_tag "weather-icons/#{current_condition["icon"]}", width: 30 if current_condition.present?
+            = (current_condition["temperature"].blank? ? "–" : current_condition["temperature"]) if current_condition.present?
+          %td.col7
+            = image_tag "weather-icons/#{tom_mor_forecast["icon"]}", width: 30 if tom_mor_forecast.present?
+            .value-area
+              %span= (tom_mor_forecast.blank? ? "–" : tom_mor_forecast["temperature"]) if forecast.present?
+              = (tom_nig_forecast.blank? ? "–" : tom_nig_forecast["temperature"]) if forecast.present?
+          %td.col8
+            = image_tag "weather-icons/#{nex_mor_forecast["icon"]}", width: 30 if nex_mor_forecast.present?
+            .value-area
+              %span= (nex_mor_forecast.blank? ? "–" : nex_mor_forecast["temperature"]) if forecast.present?
+              = (nex_nig_forecast.blank? ? "–" : nex_nig_forecast["temperature"]) if forecast.present?
+          %td.col9
+            %span.sunrise –
+            %span.sunset
+
+- else
+  %h3 Sorry we coundn't find any river.

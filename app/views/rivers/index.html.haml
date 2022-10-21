@@ -1,0 +1,10 @@
+- set_meta_tags(description: "My Rivers", title: "My Rivers | RiverBoss")
+
+.my-river-area
+  .head-part
+    = render "shared/river_buttons"
+    %h1 My Rivers
+
+  = render "shared/river_table", rivers: @rivers
+
+  = render 'shared/home_page_info'

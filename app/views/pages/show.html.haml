@@ -1,0 +1,19 @@
+:ruby
+  url         = post_url(@page)
+  title       = "#{@page.title} | RiverBoss"
+  description = @page.meta_description
+  keywords    = @page.meta_keywords
+
+  set_meta_tags(description: description,
+    keywords: keywords,
+    title: title,
+    twitter: { card: "summary", site: "@riverboss", url: url, title: title, description: description },
+    og: { title: title, url: url, type: "website", description: description, site_name: "RiverBoss" },
+    canonical: url)
+
+.my-river-area
+  .head-part
+    %ul= smart_link_to "Edit", edit_page_path(@page), class: "btn", data: {"no-turbolink" => true} if admin_signed_in?
+    %h1= @page.title
+
+  = @page.content.html_safe

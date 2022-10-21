@@ -1,0 +1,15 @@
+= simple_form_for @post do |f|
+  - if @post.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@post.errors.count, "error")} prohibited this page from being saved:"
+      %ul
+        - @post.errors.full_messages.each do |msg|
+          %li= msg
+  .form-inputs
+    = f.input :title
+    = f.input :content, as: :ckeditor
+    = f.input :status, as: :select, collection: ["Published", "Unpublished"], prompt: "Published"
+    = f.input :meta_keywords
+    = f.input :meta_description
+  .form-actions
+    = f.submit 'Save'

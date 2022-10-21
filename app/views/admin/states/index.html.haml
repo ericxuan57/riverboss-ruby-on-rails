@@ -1,0 +1,14 @@
+- set_meta_tags(description: "States List", title: "States List | RiverBoss")
+
+%table.table.small.hovered
+  %tr
+    %th #
+    %th State Name
+    %th State Code
+    %th River Count
+  - @states.each_with_index do |s, i|
+    %tr
+      %td= i + 1
+      %td= s.name
+      %td= s.code
+      %td= s.rivers.count

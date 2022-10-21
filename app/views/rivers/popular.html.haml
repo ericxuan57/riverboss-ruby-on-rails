@@ -1,0 +1,19 @@
+:ruby
+  url         = popular_rivers_url
+  title       = "Popular Rivers | RiverBoss"
+  description = "Get popular river conditions"
+  keywords    = "rivers,popular rivers,states,river conditions,flow,conditions,fishing,report,river,gauge,CFS,weather,radar,forecast"
+
+  set_meta_tags(description: description,
+    keywords: keywords,
+    title: title,
+    twitter: { card: "summary", site: "@riverboss", url: url, title: title, description: description },
+    og: { title: title, url: url, type: "website", description: description, site_name: "RiverBoss" },
+    canonical: url)
+
+.my-river-area
+  .head-part
+    = render "shared/river_buttons"
+    %h1 Popular Rivers
+
+  = render "shared/river_list", rivers: @rivers, no_pagination: true

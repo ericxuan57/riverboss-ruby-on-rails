@@ -1,0 +1,27 @@
+:ruby
+  set_meta_tags(description: "Edit #{@river.name}", title: "Edit #{@river.name} | RiverBoss")
+  high_value = @river.conditions.present? ? @river.conditions["high"] : 3000
+  low_value  = @river.conditions.present? ? @river.conditions["low"] : 300
+
+.my-river-area
+  .head-part
+    %h1 Edit "#{@river.name}" Conditions
+
+= simple_form_for @river, url: admin_river_path(@river) do |f|
+  - if @river.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@river.errors.count, "error")} prohibited this page from being saved:"
+      %ul
+        - @river.errors.full_messages.each do |msg|
+          %li= msg
+  .form-inputs
+    = f.simple_fields_for :conditions do |c|
+      .condition
+        %label
+          %span * River Conditions
+          = text_field_tag :river_condition_low, low_value, name: "river[conditions][low]", readonly: true
+          %span -
+          = text_field_tag :river_condition_high, high_value, name: "river[conditions][high]", readonly: true
+        #condition_filter{data: {low_value: low_value, high_value: high_value, low_element: "#", high_element: "#"}}
+  .form-actions
+    = f.submit

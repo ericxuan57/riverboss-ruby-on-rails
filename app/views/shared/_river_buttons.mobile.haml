@@ -1,0 +1,7 @@
+.btn-holder
+  - if user_signed_in?
+    = link_to "Add Rivers", new_users_river_path, class: :btn
+    = link_to "Manage", users_rivers_path, class: :btn
+  - else
+    = link_to "Add Rivers", new_user_session_path(redirect_to: new_users_river_path), class: :btn
+    = link_to "Manage", new_user_session_path(redirect_to: users_rivers_path), class: :btn

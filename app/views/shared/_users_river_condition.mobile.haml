@@ -1,0 +1,45 @@
+- custom_selected = user_river.conditions.present? || !river.conditions.present? ? true : false
+- high_value = user_river.conditions.present? ? user_river.conditions["high"] : 3000
+- low_value  = user_river.conditions.present? ? user_river.conditions["low"] : 300
+
+.river-condition-form
+  %h2 Edit River Condition Levels
+  %p Use the controls below to configure custom or default river condition levels for:
+  %h2= river.name
+
+  = form_tag users_river_path(user_river), method: :put, id: "save_my_river_form" do
+    = hidden_field_tag :redirect_to, params[:redirect_to]
+    = hidden_field_tag :authenticity_token, form_authenticity_token
+    - if river.conditions.present?
+      .row
+        .left
+          %label
+            %strong Default Condition Values
+          = radio_button_tag :default, true, true
+        .right
+          Use RiverBoss recommended values for river conditions.
+          %h3
+            %span.low LOW
+            = river.conditions["low"]
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            %span.high HIGH
+            = river.conditions["high"]
+
+    .row{style: "margin-top: 25px"}
+      .left
+        %label
+          %strong Custom River Conditions
+          = radio_button_tag :default, false, custom_selected
+      .right.condition.form-inputs
+        Use the slider below to configure custom river condition values for '#{river.name}'
+        .text-boxes
+          = text_field_tag :river_condition_low, low_value, name: "user_river[condition_low]", readonly: true
+          %span -
+          = text_field_tag :river_condition_high, high_value, name: "user_river[condition_high]", readonly: true
+        #condition_filter{data: {low_value: low_value, high_value: high_value}}
+
+    .form-actions.text-center= submit_tag "Save to my Rivers"
+

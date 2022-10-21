@@ -1,0 +1,24 @@
+- set_meta_tags(description: "Manage My Rivers", title: "Manage My Rivers | RiverBoss")
+
+.my-river-area
+  .head-part
+    = render "shared/river_buttons"
+    %h1 Manage Rivers
+
+  #add_river_result.draggable
+    - if @users_rivers.any?
+      - @users_rivers.each do |ur|
+        .river{id: "users_river_#{ur.id}"}
+          .name
+            = link_to users_river_path(ur), data: {confirm: "Are you sure you want to delete #{ur.river.name}?", method: :delete}, class: "delete" do
+              = image_tag "delete.png", width: 16
+            &nbsp;
+            &nbsp;
+            = link_to ur.river.name, river_path(ur.river)
+          .form-holder
+            = suggest_tag ur.river, "Edit"
+            &nbsp;
+            &nbsp;
+            %span.drag-handle= image_tag "drag.png", width: 16
+    - else
+      %h3 Sorry we coundn't find any river.

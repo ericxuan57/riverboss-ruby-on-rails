@@ -1,0 +1,61 @@
+- populars = River.popular.zip(Region.popular).flatten
+.social-network
+  - unless user_signed_in?
+    .frame
+      %em Sign Up / Login with
+      %ul
+        = smart_link_to "Facebook", user_omniauth_authorize_path(:facebook), class: "facebook"
+        = smart_link_to "Twitter", user_omniauth_authorize_path(:twitter), class: "twitter"
+        = smart_link_to "LinkedIn", user_omniauth_authorize_path(:linkedin), class: "linkedin"
+    %strong
+      Or
+      = link_to "register directly", new_user_registration_path(redirect_to: params[:redirect_to])
+      with RiverBoss.com
+  - else
+    .link-holder= link_to "My Account", edit_user_registration_path
+    .link-holder= link_to "Edit My Rivers", users_rivers_path
+    .link-holder= link_to "Logout", destroy_user_session_path, method: :delete
+
+- unless user_signed_in?
+  .acount-area
+    %h2 Account Login
+    = form_tag session_path(:user) do
+      .side-login-form
+        .inputs.form-inputs
+          = text_field_tag 'user[email]', nil, placeholder: "email address"
+          = password_field_tag 'user[password]', nil, placeholder: "password"
+        .form-actions
+          %button.btn Login
+        .links
+          = check_box_tag 'user[remember_me]'
+          = label_tag 'user[remember_me]', 'Remember me'
+          %br/
+          = link_to "Forgot your password?", new_password_path(:user)
+
+%nav.popular-rivers
+  %h2 Popular Rivers & Regions
+  %ul
+    - populars.each do |r|
+      - cache "popular-#{r.class.name}/#{r}" do
+        - if r.class.name == "River"
+          %li= link_to "#{r.name_short}, #{r.city}, #{r.state.code}", river_path(r)
+        - else
+          %li= link_to "#{r.name} (Region)", region_path(r)
+
+%ins.adsbygoogle{"data-ad-client" => "ca-pub-9646142879731590", "data-ad-format" => "auto", "data-ad-slot" => "7486431462", :style => "display:block"}
+:javascript
+  (adsbygoogle = window.adsbygoogle || []).push({});
+
+- if false
+  %section.news-letter
+    = render "shared/newsletter_form"
+
+%nav.acount-area
+  %h2 Acount
+  %ul
+    - unless user_signed_in?
+      = smart_link_to "Login", new_user_session_path
+      = smart_link_to "Register", new_user_registration_path(redirect_to: params[:redirect_to])
+    = smart_link_to "My Account", edit_user_registration_path
+    = smart_link_to "Edit My Rivers", users_rivers_path
+    = smart_link_to "Logout", destroy_user_session_path, method: :delete if user_signed_in?

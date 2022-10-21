@@ -1,0 +1,91 @@
+//
+// Variables
+// --------------------------------------------------
+
+
+// Colors
+// ------------
+
+$gray-lighter:          #dedede !default;
+$gray-light:            #bbb !default;
+$gray:                  #888 !default;
+$gray-dark:             #565656 !default;
+$gray-darker:           #232323 !default;
+
+
+// Base
+// --------
+$body-bg:               #fff !default;
+$text-color:            #444 !default;
+$body-width-max:        1200px !default;
+
+
+// Links
+// -------------------------
+
+$link-color:            #f00 !default;
+$link-hover-color:      darken($link-color, 15%) !default;
+
+
+// Typography
+// -------------------------
+
+$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:        $font-family-sans-serif !default;
+
+$font-size-base:          16px !default;
+$font-size-large:         ceil($font-size-base * 1.25) !default; // ~20px
+$font-size-small:         ceil($font-size-base * 0.85) !default; // ~14px
+$font-size-smaller:       ceil($font-size-base * 0.75) !default; // ~12px
+
+$font-size-h1:            floor($font-size-base * 2.2) !default; // ~35.2px
+$font-size-h2:            floor($font-size-base * 1.75) !default; // ~28px
+$font-size-h3:            ceil($font-size-base * 1.5) !default; // ~24px
+$font-size-h4:            ceil($font-size-base * 1.25) !default; // ~20px
+$font-size-h5:            $font-size-base !default;
+$font-size-h6:            ceil($font-size-base * 0.85) !default; // ~14px
+
+$line-height-base:        1.5 !default;
+$line-height-computed:    floor($font-size-base * $line-height-base) !default; // ~24px
+$line-height-large:       1.33 !default;
+$line-height-small:       1.6 !default;
+
+$headings-font-family:    $font-family-serif !default;
+$headings-font-weight:    bold !default;
+$headings-line-height:    1.1 !default;
+
+
+// Setting Div Height
+// ------------------------
+
+$header-height-mobile:    40px !default;
+$header-height:           60px !default;
+$footer-height:           40px !default;
+$header-color:            #2FAAB4 !default;
+$footer-color:            #CECECE !default;
+$form-color:              #2FAAB4 !default;
+
+
+// Media queries breakpoints
+// --------------------------------------------------
+
+// Extra small screen / phone
+$mobile-min:              0px !default;
+$mobile-max:              480px !default;
+
+// Small screen / tablet
+$tablet-min:              481px !default;
+$tablet-max:              768px !default;
+
+// Medium screen / desktop
+$screen-min:              769px !default;
+$screen-max:              992px !default;
+
+// Large screen
+$l-screen-min:            993px !default;
+$l-screen-max:            1200px !default;
+
+// wide desktop
+$w-screen-min:            1201px !default;

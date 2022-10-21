@@ -1,0 +1,128 @@
+/* Styles for the CoverPop.js plugin */
+
+
+html,
+body {
+    overflow: auto;
+}
+
+body {
+    position: relative;
+}
+
+.CoverPop-open,
+.CoverPop-open body {
+    overflow: hidden;
+}
+
+#CoverPop-cover {
+    display: none;
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    -webkit-animation: fade-in .25s ease-in;
+    -moz-animation-name: fade-in .25s ease-in;
+    -ms-animation-name: fade-in .25s ease-in;
+    -o-animation-name: fade-in .25s ease-in;
+    animation-name: fade-in .25s ease-in;
+}
+
+    .CoverPop-open #CoverPop-cover {
+        display: block;
+    }
+
+
+@-webkit-keyframes fade-in {
+    0% { opacity: 0; }
+    25% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Custom Styles */
+
+.splash {
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.65);
+}
+
+.splash-center {
+    text-align: left;
+    max-width: 450px;
+    padding: 20px;
+    background: #fff;
+    margin: 10% auto 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 70px 4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 70px 4px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 70px 4px rgba(0,0,0,0.75);
+}
+
+.splash-title {
+    margin: 0 0 5px 0;
+}
+
+.input-text {
+    width: 100%;
+    margin-bottom: 5px;
+    border: solid 1px #ccc;
+    padding: 7px;
+}
+
+.submit-button {
+    margin-bottom: 10px;
+}
+
+.close-splash {
+    margin: 0;
+    font-size: 12px;
+}
+
+.splash-center p, .splash-center a, .splash-center span, .splash-title { font: normal 20px/25px "PT Sans Narrow", arial, sans-serif;
+    text-align: left;
+}
+
+.splash-center p { color: #666; }
+.splash-center a { color: #06c; }
+
+.splash-center h2, .splash-center a { font-size: 20px; font-weight: 700;}
+
+.splash-center a { text-decoration: underline; }
+
+.splash-center h2 { color: #ed2690; }
+
+.splash-center #modal-img {  width: 28px; }
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px)
+{
+    .splash-center {
+        max-width: 80%;
+        width: 80%;
+        padding: 5%;
+    }
+
+    #modal-img { display: none; }
+
+    .splash-center { margin-top: 75px; }
+
+
+    .splash-center p, .splash-center a, .splash-center span {
+        font: normal 20px/25px "PT Sans Narrow", arial, sans-serif;
+        text-align: left;
+    }
+
+    .splash-title, h2, .CoverPop-close, .close-splash {
+        font: normal 20px/30px "PT Sans Narrow", arial, sans-serif !important;
+        text-align: left;
+    }
+
+    .splash-title { margin-bottom: 25px; }
+
+}

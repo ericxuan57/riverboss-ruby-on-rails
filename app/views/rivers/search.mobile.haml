@@ -1,0 +1,19 @@
+- set_meta_tags(description: "Search result for #{params[:q]}", title: "Search result for #{params[:q]} | RiverBoss")
+
+
+%section#content
+  .content-holder
+    - unless params[:q].blank?
+      %h1 Search results for "#{params[:q]}"
+    - else
+      %h1 Search Rivers
+
+    = render "layouts/search_form"
+
+  %table#search_result_wrap
+
+  %script#search_river_result_tmpl{ type: "text/x-tmpl" }
+    %tr
+      %td.col1= link_to "{%= o.river_name %}", "/rivers/{%= o.river_id %}"
+
+  = render "shared/river_list", rivers: @rivers unless params[:q].blank?

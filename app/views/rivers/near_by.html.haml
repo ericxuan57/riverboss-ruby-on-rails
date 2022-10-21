@@ -1,0 +1,21 @@
+:ruby
+  url         = near_by_rivers_url
+  title       = "RiverBoss - Realtime River and Weather Conditions"
+  description = "RiverBoss - Realtime River and Weather Conditions"
+  keywords    = "riverBoss,rivers,near by rivers,river conditions,flow,river weather conditions"
+
+  set_meta_tags(description: description,
+    keywords: keywords,
+    title: title,
+    twitter: { card: "summary", site: "@riverboss", url: url, title: title, description: description },
+    og: { title: title, url: url, type: "website", description: description, site_name: "RiverBoss" },
+    canonical: url)
+
+.my-river-area
+  .head-part
+    = render "shared/river_buttons"
+    %h1 Rivers Near Me
+
+  = render "shared/river_table", rivers: @rivers, no_pagination: true
+
+  = render 'shared/home_page_info'

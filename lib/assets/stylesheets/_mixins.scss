@@ -1,0 +1,20 @@
+//
+// Our Own Mixins
+// --------------------------------------------------
+
+// Opacity
+// -------------------------
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  // IE8 filter
+  $opacity-ie: ($opacity * 100);
+  filter: #{alpha(opacity=$opacity-ie)};
+}
+
+@mixin link-color($link-color, $link-hover-color: darken($link-color, 15%)) {
+  color: $link-color;
+
+  &:hover, &:active, &.active {
+    color: $link-hover-color;
+  }
+}

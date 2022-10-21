@@ -1,0 +1,10 @@
+- set_meta_tags(description: "New Post", title: "New Post | RiverBoss")
+
+.my-river-area
+  .head-part
+    %ul
+      = smart_link_to 'Back', posts_path(admin_view: true), class: "btn"
+
+    %h1 Editing #{@post.title}
+
+  = render 'form'

@@ -1,0 +1,31 @@
+- set_meta_tags(description: "Rivers List", title: "Rivers List | RiverBoss")
+- index_offset =  1
+- index_offset += (params[:page].to_i - 1) * 50 if params[:page].present?
+
+.my-river-area
+  .head-part
+    %h1
+      River Lists
+      = " for #{params[:q]}" if params[:q]
+
+%form.search-form.admin{action: search_admin_rivers_path}
+  %fieldset
+    = text_field_tag :q, params[:q], placeholder: "search rivers as admin", type: "search"
+    = submit_tag "Go", name: nil
+
+%table.table.small.hovered
+  %tr
+    %th #
+    %th River Name
+    %th Condition - High
+    %th Condition - Low
+  - @rivers.each_with_index do |s, i|
+    %tr
+      %td= i + index_offset
+      %td= link_to s.name, edit_admin_river_path(s)
+      %td= s.conditions["high"] unless s.conditions.blank?
+      %td= s.conditions["low"] unless s.conditions.blank?
+
+%br
+%br
+.text-center= paginate @rivers

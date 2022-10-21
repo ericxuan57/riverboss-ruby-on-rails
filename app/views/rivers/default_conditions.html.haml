@@ -1,0 +1,35 @@
+:ruby
+  url         = default_conditions_rivers_url
+  title       = "Default Rivers Conditions | RiverBoss"
+  description = "Get default river conditions"
+  keywords    = "rivers,popular rivers,states,river conditions,flow,conditions,fishing,report,river,gauge,CFS,weather,radar,forecast"
+
+  set_meta_tags(description: description,
+    keywords: keywords,
+    title: title,
+    twitter: { card: "summary", site: "@riverboss", url: url, title: title, description: description },
+    og: { title: title, url: url, type: "website", description: description, site_name: "RiverBoss" },
+    canonical: url)
+
+.my-river-area
+  .head-part
+    %ul
+      %li= link_to "Suggest", suggest_path, class: "btn"
+
+    %h1 Default River Conditions
+
+  %table.table.big.hovered
+    %thead
+      %tr
+        %th.extra-width River Name
+        %th.low Low
+        %th.high High
+    %tbody
+      - @rivers.each do |s|
+        %tr
+          %td= link_to s.name, river_path(s)
+          %td.low= s.conditions["low"]
+          %td.high= s.conditions["high"]
+  %br/
+  = paginate @rivers
+

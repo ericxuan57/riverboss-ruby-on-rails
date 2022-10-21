@@ -1,0 +1,22 @@
+- set_meta_tags(description: "Pages List", title: "Pages List | RiverBoss")
+
+.my-river-area
+  .head-part
+    %h1 Pages
+
+%table.table
+  %tr
+    %th Title
+    %th Status
+    %th
+
+  - @pages.each do |page|
+    %tr
+      %td= link_to page.title, edit_page_path(page), data: {"no-turbolink" => true}
+      %td= page.status.capitalize
+      %td
+        = link_to "Edit", edit_page_path(page), data: {"no-turbolink" => true}
+        &nbsp;
+        &nbsp;
+        = link_to "Show", page_path(page)
+

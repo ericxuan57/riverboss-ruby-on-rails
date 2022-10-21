@@ -1,0 +1,18 @@
+:ruby
+  url         = state_url(@state)
+  title       = "Rivers in #{@state.name} | RiverBoss"
+  description = "Get river conditions in #{@state.name}"
+  keywords    = "#{@state.name},rivers,flow,conditions,fishing,report,river,gauge,CFS,weather,radar,forecast"
+
+  set_meta_tags(description: description,
+    keywords: keywords,
+    title: title,
+    twitter: { card: "summary", site: "@riverboss", url: url, title: title, description: description },
+    og: { title: title, url: url, type: "website", description: description, site_name: "RiverBoss" },
+    canonical: url)
+
+%section#content
+  .content-holder
+    %h1 Rivers in #{@state.name}
+
+  = render "shared/river_list", rivers: @rivers

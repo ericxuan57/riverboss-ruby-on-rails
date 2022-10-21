@@ -1,0 +1,29 @@
+- set_meta_tags(description: "Login", title: "Login | RiverBoss")
+
+.my-river-area
+  .head-part
+    %h1 Sign Up / Login
+= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+  .form-inputs
+    = f.input :email, required: false, autofocus: true
+    = f.input :password, required: false
+    .clearfix
+      = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+      = link_to "Forgot your password?", new_password_path(resource_name), class: "forgot_password"
+    - if params[:redirect_to].present?
+      = text_field_tag :redirect_to, params[:redirect_to], type: :hidden
+  .form-actions
+    = f.button :submit, "Login"
+
+.social-network
+  .frame
+    %h4 Register or login with
+    %ul
+      - resource_class.omniauth_providers.each do |provider|
+        %li
+          = link_to "Login with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider), class: "#{provider.to_s}"
+
+%h4
+  Or
+  = link_to "Register directly ", new_registration_path(resource_name, redirect_to: params[:redirect_to])
+  with RiverBoss.com

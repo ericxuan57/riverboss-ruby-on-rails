@@ -1,0 +1,25 @@
+:ruby
+  url         = states_url
+  title       = "Region List | RiverBoss"
+  description = "Get river conditions from these region list"
+  keywords    = "rivers,regions,river conditions"
+
+  set_meta_tags(description: description,
+    keywords: keywords,
+    title: title,
+    twitter: { card: "summary", site: "@riverboss", url: url, title: title, description: description },
+    og: { title: title, url: url, type: "website", description: description, site_name: "RiverBoss" },
+    canonical: url)
+
+.my-river-area
+  .head-part
+    %ul
+      %li= link_to "Suggest", contact_path, class: :btn
+    %h1 Regions
+
+%table.table.big.hovered
+  - @regions.each do |r|
+    %tr
+      %td= link_to r.name, region_path(r)
+
+%br

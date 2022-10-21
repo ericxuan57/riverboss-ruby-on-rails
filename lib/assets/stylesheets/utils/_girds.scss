@@ -1,0 +1,52 @@
+$number-of-grids: 12;
+
+.row {
+  width: 100%;
+
+  &:not(.no-clearfix) {
+    @include clearfix();
+  }
+
+  [class*="span"] {
+    float: left;
+    margin-right: 1.5%;
+    min-height: 10px; // .span* classes can be used for margin too
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@for $i from 1 through $number-of-grids {
+  .span#{$i} {
+    // Calculating the width of each span after reducing margin
+    width: percentage($i / $number-of-grids) - 1.5;
+  }
+}
+
+// Used to create 2 halves without wasting space;
+.row.equal-halves {
+  .span6 {
+    margin: 0;
+    width: 49.25%;
+
+    &:first-child {
+      margin-right: 1.5%;
+    }
+  }
+}
+
+
+// Responsiveness
+
+@media (max-width: $tablet-max) {
+  @for $i from 1 through $number-of-grids {
+    .span#{$i} {
+      float: none;
+      display: block;
+      width: 100% !important;
+      margin: 0 0 15px !important;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+- set_meta_tags(description: "Users List", title: "Users List | RiverBoss")
+
+- index_offset =  1
+- index_offset += (params[:page].to_i - 1) * 50 if params[:page].present?
+
+%table.table.small.hovered
+  %tr
+    %th #
+    %th Email
+    %th Account Type
+    %th Created At
+    %th Admin
+    %th Blocked
+  - @users.each_with_index do |u, i|
+    %tr
+      %td= i + index_offset
+      %td= u.email
+      %td= u.provider.titleize if u.provider.present?
+      %td= l(u.created_at, format: :long_12)
+      %td= u.admin?
+      %td= u.blocked?
+
+%br
+%br
+.text-center= paginate @users

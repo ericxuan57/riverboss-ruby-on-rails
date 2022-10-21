@@ -1,0 +1,23 @@
+- set_meta_tags(description: "Contact RiverBoss", title: "Contact Us | RiverBoss")
+%section#content
+  .content-holder
+    %h1 Contact Us
+  .gen-pad
+    .contact-details
+      %h3 Riverboss
+      .street 2271 Professor Avenue<br/>
+      .city Cleveland, Ohio 44113
+      .phone (216) 502-1900
+      .email= link_to "info@RiverBoss.com", "mailto:info@RiverBoss.com"
+      .heading For advertising inquiries please contact:
+      .name Ryan Valentine
+      .email= link_to "ryan@RiverBoss.com", "mailto:ryan@RiverBoss.com"
+    = simple_form_for Contact.new, url: contact_submit_path do |f|
+      .form-inputs
+        = f.input :name, required: true
+        = f.input :email, required: true, input_html: {value: (current_user.present? ? current_user.email : nil)}
+        = f.input :message, as: :text, required: true
+      %div{style: "display: none"}
+        = f.input :nickname
+      .form-actions
+        = f.button :submit, 'Send message', data: { disable_with: "Sending Email..." }, class: :btn

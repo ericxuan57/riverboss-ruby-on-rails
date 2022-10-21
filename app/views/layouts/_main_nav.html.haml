@@ -1,0 +1,32 @@
+%nav
+  %ul#nav.menu-hard-code
+    %li
+      = link_to "My Rivers", rivers_path
+      .drop
+        .col
+          .content
+            %ul
+              = smart_link_to "View My Rivers", rivers_path
+              = smart_link_to "Add Rivers", new_users_river_path
+              = smart_link_to "Manage", users_rivers_path
+    = smart_link_to "Near Me", near_by_rivers_path
+    %li
+      = link_to "Regions", regions_path
+      .drop.regions-menu
+        .col
+          .content.regions
+            %ul
+              - cache 'regions/for_menu' do
+                - Region.for_menu.each do |r|
+                  = smart_link_to r.name, region_path(r)
+    %li
+      = link_to "States", states_path
+      .drop.states-menu
+        .col
+          .content.states
+            %ul
+              - cache 'states/for_menu' do
+                - State.for_menu.each do |s|
+                  = smart_link_to s.name, state_path(s)
+
+    = smart_link_to "Popular", popular_rivers_path

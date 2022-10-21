@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="width=device-width, initial-scale=1.0 " name="viewport">
+  <title>We're sorry, but something went wrong (500)</title>
+  <link data-turbolinks-track="true" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400" media="all" rel="stylesheet" />
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: #043464;
+    color: #cccccc;
+    text-align: center;
+    font: 18px / 25px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+    width: 265px;
+    margin: 0 auto;
+  }
+  a {
+    color: #7bcfff;
+    text-decoration: underline;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  .error {
+    color: #0066cc;
+  }
+  img {
+    margin: 25px 0;
+  }
+  p {
+    width: 220px;
+    margin: 0 auto 25px;
+  }
+  </style>
+</head>
+<body>
+  <img src="/logo-error-page.png" width="265" />
+  <p>You tried to horse it in and now you've snapped the tippet.<br/>Your guide looks pissed.</p>
+  <p>Head <a href="" onclick="history.go(-1);">back</a> upriver and try it again. Or you can head for the <a href="/">barn</a>.</p>
+  <p class="error">(Error has been reported)</p>
+  <script type="text/javascript">
+  document.getElementsByTagName("body")[0].style.padding = (Math.max(document.documentElement.clientHeight, window.innerHeight || 0) - 350)/2 + "px 0 0";
+  </script>
+</body>
+</html>

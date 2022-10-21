@@ -1,0 +1,30 @@
+# == Schema Information
+#
+# Table name: posts
+#
+#  id               :integer          not null, primary key
+#  title            :string(255)
+#  content          :text
+#  status           :string(255)      default("published")
+#  meta_keywords    :string(255)
+#  meta_description :string(255)
+#  created_at       :datetime
+#  updated_at       :datetime
+#  slug             :string(255)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  content: MyText
+  status: MyString
+  meta_keywords: MyString
+  meta_description: MyString
+
+two:
+  title: MyString
+  content: MyText
+  status: MyString
+  meta_keywords: MyString
+  meta_description: MyString

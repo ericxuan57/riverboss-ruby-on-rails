@@ -1,0 +1,9 @@
+%nav.admin-menu
+  %ul
+    %li Admin Menu(not visible to users)
+    = smart_link_to "Users", admin_users_path
+    = smart_link_to "Rivers", admin_rivers_path
+    = smart_link_to "Regions", admin_regions_path
+    = smart_link_to "States", admin_states_path
+    = smart_link_to "Posts", posts_path(admin_view: true)
+    = smart_link_to "Pages", pages_path

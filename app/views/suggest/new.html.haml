@@ -1,0 +1,31 @@
+- set_meta_tags(description: "Suggest #{params[:river_name] || "River"} Condition to RiverBoss", title: "Suggest #{params[:river_name] || "River"} Condition | RiverBoss")
+
+.my-river-area
+  .head-part
+    %h1 Suggest #{params[:river_name] || "River"} Discharge Condition
+    %p{style: "max-width: 400px"} If you are familiar with a specific river and you would like to share your knowlege, please complete the form below.
+
+= simple_form_for Suggest.new, url: suggest_submit_path do |f|
+  .form-inputs
+    - if params[:river_name].present?
+      = f.input :river_name, readonly: true, input_html: {value: params[:river_name]}
+    - else
+      .text.spinner-holder
+        = f.input :river_name, required: true, placeholder: "Begin typing to search rivers", input_html: {class: "river-autocomplete", data: {url: autocomplete_rivers_url}}
+        .spinner.top-margined
+
+    .condition
+      %label
+        %span * River Conditions
+        = text_field_tag :river_condition_low, 300, name: "suggest[condition_low]", readonly: true
+        %span -
+        = text_field_tag :river_condition_high, 3000, name: "suggest[condition_high]", readonly: true
+      #condition_filter
+
+    = f.input :name, required: true
+    = f.input :email, required: true
+    = f.input :comment, as: :text
+  %div{style: "display: none"}
+    = f.input :nickname
+  .form-actions
+    = f.button :submit, 'SEND', data: { disable_with: "Sending Email..." }

@@ -1,0 +1,65 @@
+@import "includes";
+
+.form-inputs {
+  input:not([type=checkbox]), textarea, select {
+    display: block;
+    width: 300px;
+    background: #fdfdfd;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0 7px;
+    color: #999;
+    height: 26px;
+    font: 700 18px / 26px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+  }
+
+  .g-recaptcha {
+    margin-bottom: 20px;
+  }
+
+  textarea {
+    height: 250px;
+    resize: vertical;
+  }
+
+  .error {
+    color: red;
+  }
+
+  .ckeditor {
+    margin-bottom: 20px;
+
+    .error {
+      margin-top: 5px;
+    }
+  }
+
+  .boolean {
+    margin-bottom: 10px;
+  }
+}
+
+.form-actions {
+  input {
+    background: #c5df82;
+    text-align: center;
+    border: none;
+    border-bottom: 3px solid #aace63;
+    border-radius: 3px;
+    color: #06c;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 4px 8px 0;
+    height: 34px;
+    font: 700 16px / 21px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+  }
+}
+
+input {
+  @include placeholder {
+    font-weight: normal;
+    color: #bbb;
+  }
+}

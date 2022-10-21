@@ -1,0 +1,12 @@
+- set_meta_tags(description: "Edit #{@page.title}", title: "Edit #{@page.title} | RiverBoss")
+
+.my-river-area
+  .head-part
+    %ul
+      = smart_link_to 'Back', pages_path, class: "btn"
+      = smart_link_to 'Show', @page, class: "btn"
+
+    %h1 Editing #{@page.title}
+
+
+  = render 'form'

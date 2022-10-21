@@ -1,0 +1,111 @@
+//
+// Utility classes
+// --------------------------------------------------
+
+
+// Floats
+// -------------------------
+
+.clearfix {
+  @include clearfix();
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+.float-middle {
+  float: none;
+  margin: 0 auto;
+}
+
+
+// Text teansform
+// -------------------------
+.text-transform-remove {
+  text-transform: none !important;
+}
+
+.text-transform-capitalize {
+  text-transform: capitalize !important;
+}
+
+.text-transform-uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-transform-lowercase {
+  text-transform: lowercase !important;
+}
+
+
+// Text Alignment
+// ---------------------
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+
+
+// Toggling content
+// -------------------------
+
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.invisible {
+  visibility: hidden;
+}
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+
+// For Affix plugin
+// -------------------------
+
+.affix {
+  position: fixed;
+}
+
+.weak {
+  font-size: 80%;
+  @include opacity(0.8);
+}
+
+small, .small  { font-size: 80%; }
+
+
+// Classes for device hide and show
+// --------------------------------------------------
+
+@media (min-width: $screen-min) {
+.visible-phone { display: none; }
+.visible-tablet { display: none; }
+.visible-desktop { display: block; }
+.hidden-phone { display: block; }
+.hidden-tablet { display: block; }
+.hidden-desktop { display: none; }
+}
+
+@media (min-width: $tablet-min) and (max-width: $tablet-max) {
+.visible-phone { display: none; }
+.visible-tablet { display: block; }
+.visible-desktop { display: none; }
+.hidden-phone { display: block; }
+.hidden-tablet { display: none; }
+.hidden-desktop { display: block; }
+}
+
+@media (min-width: $mobile-min) and (max-width: $mobile-max) {
+.visible-phone { display: block; }
+.visible-tablet { display: none; }
+.visible-desktop { display: none; }
+.hidden-phone { display: none; }
+.hidden-tablet { display: block; }
+.hidden-desktop { display: block; }
+}

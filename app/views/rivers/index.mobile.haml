@@ -1,0 +1,8 @@
+- set_meta_tags(description: "My Rivers", title: "My Rivers | RiverBoss")
+
+%section#content
+  .content-holder
+    = render "shared/river_buttons"
+    %h1 My Rivers
+
+  = render "shared/river_table", rivers: @rivers

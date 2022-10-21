@@ -1,0 +1,17 @@
+- set_meta_tags(description: "Regions List", title: "Regions List | RiverBoss")
+
+%table.table.small.hovered
+  %tr
+    %th #
+    %th Region Name
+    %th River Count
+    %th Rivers Name
+  - @regions.each_with_index do |r, i|
+    %tr
+      %td= i + 1
+      %td= r.name
+      %td= r.rivers.count
+      %td
+        - r.rivers.each do |s|
+          = "#{s.name_short}, #{s.city}"
+          %br/

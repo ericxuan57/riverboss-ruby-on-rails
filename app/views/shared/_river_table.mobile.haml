@@ -1,0 +1,26 @@
+- rivers ||= @rivers
+
+- if rivers.any?
+  %table.river_table
+    %thead
+      %tr
+        %th.col1 River
+        %th.col2
+          %button{:type => "button", :value => "Ft CFS", class: "toggle_cfs_ft cfs"}
+            CFS
+            %span.color Ft
+          %button{:type => "button", :value => "Ft CFS", class: "toggle_cfs_ft ft"}
+            Ft
+            %span.color CFS
+        %th.col3 Condition
+    %tbody
+      - rivers.each do |r|
+        %tr
+          %td.col1= link_to truncate(r.name_short, length: 25), river_path(r), class: "river-graph-show"
+          %td.col2
+            %span.cfs= check_nil r.discharge
+            %span.ft= check_nil r.gauge_height.to_f.round(1)
+          = find_discharge_status r, "list", true
+- else
+  .gen-pad
+    %h3 Sorry we coundn't find any river.

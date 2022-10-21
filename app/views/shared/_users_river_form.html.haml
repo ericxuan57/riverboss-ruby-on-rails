@@ -1,0 +1,9 @@
+%p
+  River
+  = "'#{river.name}'"
+  is not aded to your 'My Rivers'. Please save it before configuring condition for this river.
+
+%form{action: users_rivers_path, method: :post, data: {remote: true, type: :json}, id: "save_my_river_form"}
+  = hidden_field_tag :river_id, river.id
+  = hidden_field_tag :authenticity_token, form_authenticity_token
+  .form-actions.text-center= submit_tag "Save to my Rivers"

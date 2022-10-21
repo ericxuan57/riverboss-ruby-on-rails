@@ -1,0 +1,98 @@
+:ruby
+  current_condition = @river.weather.present? ? @river.weather["current_condition"] : nil
+  forecast = @river.weather.present? ? @river.weather["forecast"] : nil
+  url         = river_url(@river)
+  title       = "#{@river.name} | RiverBoss"
+  description = "Get river conditions for #{@river.name}"
+  keywords    = "#{@river.name},rivers,flow,conditions,fishing,report,river,gauge,CFS,weather,radar,forecast"
+
+  set_meta_tags(description: description,
+    keywords: keywords,
+    title: title,
+    twitter: { card: "summary", site: "@riverboss", url: url, title: title, description: description },
+    og: { title: title, url: url, type: "website", description: description, site_name: "RiverBoss" },
+    canonical: url)
+
+%section.river-detial
+  %header.head-part
+    .frame
+      %strong Conditions for
+      %h1= @river.name
+    - if user_signed_in?
+      - unless current_user.rivers.pluck(:id).include? @river.id
+        %form{action: users_rivers_path, method: :post}
+          = hidden_field_tag :river_id, @river.id
+          = hidden_field_tag :authenticity_token, form_authenticity_token
+          .form-actions= submit_tag "Save to my Rivers", class: "no-bot-margin"
+    - else
+      = link_to "Save to my Rivers", new_user_session_path(redirect_to: url), class: "btn auto no-bot-margin"
+  .river-box
+    .info-part
+      %ul
+        %li
+          %h2 CFS
+        %li Gague Ht
+        %li Condition
+        %li Temp
+        %li Turbidity
+      %ul.right
+        %li
+          %h2= check_nil @river.discharge
+        %li= check_nil @river.gauge_height, "feet"
+        = find_discharge_status @river, "show"
+        %li= check_nil @river.water_temp, "°F"
+        %li= check_nil @river.turbidity, "FNU"
+      = link_to "USGS River Conditions", "https://waterdata.usgs.gov/nwis/uv/?site_no=#{@river.site_no}", target: :_blank, class: "usgs-link"
+    = image_tag "https://waterdata.usgs.gov/nwisweb/graph?agency_cd=USGS&site_no=#{@river.site_no}&parm_cd=00060&period=7", width: 420, alt: "Not Found"
+
+- if forecast.present? and forecast.any?
+  %section.river-detial1
+    %header.head-part1
+      .frame1
+        %strong Current Weather for
+        %h1= @river.name
+    .river-box1
+      .info-part1
+        %ul
+          %li
+            %h2 Now
+          %li Feels Like
+          %li Wind
+          %li Pressure
+          %li Humidity
+          %li Sunrise
+          %li Sunset
+        %ul.right1.sunrise-sunset{data: {location: "#{@river.city} #{@river.state.name}"}}
+          %li
+            = image_tag "weather-icons/#{current_condition["icon"]}", width: 50 if current_condition.present?
+            %h2= check_nil current_condition["temperature"], "°F"
+          %li= check_nil current_condition["feels_like"], "°F"
+          %li= check_nil current_condition["wind"]
+          %li= check_nil current_condition["pressure"], "in", true
+          %li= check_nil current_condition["humidity"], "%"
+          %li.sunrise -
+          %li.sunset -
+        = link_to "NOAA Current Conditions", "https://forecast.weather.gov/MapClick.php?lat=#{@river.latitude}&lon=#{@river.longitude}", target: :_blank
+      = image_tag @river.state.radar_image, width: 398, class: "rader-img" if @river.state.radar_image
+
+  %section.weather-block
+    %header.head-part
+      .frame
+        %strong Weather Forecast for
+        %h1= @river.name
+    .post-box
+      - forecast.each do |k,v|
+        %article.post
+          %ul
+            %li= k
+            %li= image_tag "weather-icons/#{v["icon"]}", width: 45 if v.present?
+            %li
+              .value-area
+                = v["temperature"]
+                %span= v["short_description"]
+          .text-part
+            %p= v["long_description"]
+  %section.forecast-block
+    %h2= link_to "NOAA Forecast", "https://forecast.weather.gov/MapClick.php?lat=#{@river.latitude}&lon=#{@river.longitude}", target: :_blank
+- else
+  %h2 Sorry no weather information is available for this river's location.

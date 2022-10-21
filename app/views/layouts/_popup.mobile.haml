@@ -1,0 +1,21 @@
+#CoverPop-cover.splash
+  #CoverPop-content.splash-center
+    %h2.splash-title Welcome to RiverBoss 3.0!
+    %p
+      = link_to "For our loyal Steelhead Alley visitors, you can check out enhanced Steelhead Alley conditions here.", "/regions/steelhead-alley", class: "CoverPop-close"
+    %p.close-splash
+      RiverBoss now provides river and weather data for
+      %strong all rivers
+      monitored by the USGS - over 9,000 new rivers. We've also added NOAA extended forecasts, custom river lists, and you can set
+      %strong set custom river condition levels
+      for
+      = succeed "," do
+        %span{:style => "color: #BC0E0D;"} High
+      = succeed "," do
+        %span{:style => "color: #00A555;"} Good
+      %span{:style => "color: #BC0E0D;"} Low
+      flows.
+    %p.close-splash
+      %a.CoverPop-close{:href => "#"}
+        %img#modal-img{:src => image_path("logo-coverpop.png"), :style => "float: right;"}>/
+        Ok, got it.

@@ -1,0 +1,12 @@
+- set_meta_tags(description: "Edit #{@post.title}", title: "Edit #{@post.title} | RiverBoss")
+
+.my-river-area
+  .head-part
+    %ul
+      = smart_link_to 'Back', posts_path(admin_view: true), class: "btn"
+      = smart_link_to 'Show', @post, class: "btn"
+      = smart_link_to 'Delete', @post, :method => :delete, :data => { :confirm => 'Are you sure?' }, class: "btn"
+
+    %h1 Editing #{@post.title}
+
+  = render 'form'

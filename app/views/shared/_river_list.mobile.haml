@@ -1,0 +1,13 @@
+- rivers ||= @rivers
+- no_pagination ||= false
+
+- if rivers.any?
+  %table
+    - @rivers.each do |s|
+      %tr
+        %td.col1= link_to s.name, river_path(s)
+  %br/
+  = paginate rivers unless no_pagination
+- else
+  .gen-pad
+    %h3 Sorry, we couldn’t find any rivers that match your search terms.

@@ -1,0 +1,7 @@
+- set_meta_tags(description: "Search result for #{params[:q]}", title: "Search result for #{params[:q]} | RiverBoss")
+
+.my-river-area
+  .head-part
+    %h1 Search results for "#{params[:q]}"
+
+  = render "shared/river_list", rivers: @rivers

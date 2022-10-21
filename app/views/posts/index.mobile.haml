@@ -1,0 +1,27 @@
+:ruby
+  url         = posts_url
+  title       = "News & Updates | RiverBoss"
+  description = "News & Updates"
+  keywords    = "News,Updates,blog,riverboss"
+
+  set_meta_tags(description: description,
+    keywords: keywords,
+    title: title,
+    twitter: { card: "summary", site: "@riverboss", url: url, title: title, description: description },
+    og: { title: title, url: url, type: "website", description: description, site_name: "RiverBoss" },
+    canonical: url)
+
+%section#content
+  .content-holder
+    %h1 News & Updates
+  .gen-pad
+    - @posts.each do |post|
+      .post
+        %h3= link_to post.title, post
+        .post-content= truncate strip_tags(post.content).html_safe, length: 750
+        .created-date
+          Created at
+          = l post.created_at, format: :blog_date
+
+%br/
+= paginate @posts

@@ -1,0 +1,34 @@
+ul.ui-autocomplete {
+  border-radius: 0 0 5px 5px;
+  background: #f8f8f8;
+  border: 1px solid darken(#f8f8f8, 10%);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 100;
+
+  li.ui-menu-item {
+    display: block;
+    border-top: 1px solid darken(#f8f8f8, 10%);
+
+    &:first-child {
+      border-top: none;
+    }
+
+    a {
+      display: block;
+      color: #888;
+      padding: 5px 10px;
+      cursor: pointer;
+
+      &:hover, &.ui-state-focus, &.ui-state-active {
+        background: darken(#f8f8f8, 10%);
+      }
+    }
+  }
+}
+
+.ui-helper-hidden-accessible {
+  display: none;
+}

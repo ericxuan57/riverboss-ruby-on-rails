@@ -1,0 +1,13 @@
+- recent_news = Post.where(status: "Published").limit(4).order("created_at DESC")
+
+%h2 News & Updates
+%ul
+  - Post.recent.each do |n|
+    - cache n do
+      %li
+        .head-part
+          = link_to n.title, n
+          %span= l n.created_at, format: :blog_date
+        %p= truncate strip_tags(n.content).html_safe, length: 200
+
+= link_to "Read more news...", posts_path

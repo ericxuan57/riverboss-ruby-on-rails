@@ -1,0 +1,23 @@
+- set_meta_tags(description: "Add rivers to My Rivers", title: "Add rivers to My Rivers | RiverBoss")
+
+.my-river-area
+  .head-part
+    = render "shared/river_buttons"
+    %h1 Add Rivers
+
+  .form-inputs
+    .text.spinner-holder
+      = text_field_tag :add_rivers_search, nil, placeholder: "Begin typing to search rivers", data: {url: autocomplete_rivers_url}
+      .spinner
+    .helper-text You can add items to My Rivers after searching
+
+  #add_river_result
+
+  %script#add_river_result_tmpl{ type: "text/x-tmpl" }
+    .river
+      .name= link_to "{%= o.river_name %}", "/rivers/{%= o.river_id %}"
+      .form-holder
+        %form{action: users_rivers_path, method: :post}
+          = hidden_field_tag :river_id, "{%= o.river_id %}"
+          = hidden_field_tag :authenticity_token, form_authenticity_token
+          .form-actions= submit_tag "Save to my Rivers"
