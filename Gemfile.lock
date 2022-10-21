@@ -164,7 +164,7 @@ GEM
     jquery-turbolinks (2.1.0)
       railties (>= 3.1.0)
       turbolinks
-    jquery-ui-rails (6.0.1)
+    jquery-ui-rails (5.0.5)
       railties (>= 3.2.16)
     json (2.6.2)
     jwt (2.5.0)
@@ -435,7 +435,7 @@ DEPENDENCIES
   haml-rails
   jquery-rails
   jquery-turbolinks
-  jquery-ui-rails
+  jquery-ui-rails (~> 5.0.5)
   kaminari
   mail_form
   mailcatcher
