@@ -29,7 +29,7 @@ gem 'geocoder'
 gem 'haml'
 
 # Use jquery as the JavaScript library
-# gem 'jquery-ui-rails'
+gem 'jquery-ui-rails'
 
 # Call function on both page load and page change, works with turbolinks
 gem 'jquery-turbolinks'
