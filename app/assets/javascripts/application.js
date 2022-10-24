@@ -15,7 +15,9 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require modules
-//= require jquery.ui.all
+//= require jquery.ui.sortable
+//= require jquery.ui.autocomplete
+//= require jquery.ui.slider
 //= require jquery.tmpl
 //= require jquery.placeholder
 //= require ckeditor/override
