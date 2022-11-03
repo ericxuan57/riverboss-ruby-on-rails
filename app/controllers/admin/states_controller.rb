@@ -1,6 +1,6 @@
 class Admin::StatesController < ApplicationController
 
-  before_filter :authenticate_admin!
+  before_action :authenticate_admin!
 
   def index
     @states = State.all

@@ -11,7 +11,7 @@ gem 'acts_as_list'
 gem 'bourbon'
 
 # WYSIWYG Editor
-gem 'ckeditor', '4.3.0'
+gem 'ckeditor', '4.2.4'
 
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails'
@@ -35,7 +35,7 @@ gem 'jquery-rails'
 gem 'jquery-turbolinks'
 
 # Provide Jquery UI functionality
-gem 'jquery-ui-rails', '~> 5.0.5'
+gem 'jquery-ui-rails'
 
 # Pagination Gem
 gem 'kaminari'

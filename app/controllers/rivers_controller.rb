@@ -1,6 +1,6 @@
 class RiversController < ApplicationController
 
-  before_filter :authenticate_user, only: [:index]
+  before_action :authenticate_user, only: [:index]
 
   def home_page
     if user_signed_in?

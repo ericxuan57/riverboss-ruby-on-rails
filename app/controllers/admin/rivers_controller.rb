@@ -1,6 +1,6 @@
 class Admin::RiversController < ApplicationController
 
-  before_filter :authenticate_admin!
+  before_action :authenticate_admin!
 
   def index
     @rivers = River.page(params[:page])

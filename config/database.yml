@@ -3,13 +3,13 @@ development:
   encoding: unicode
   database: riverboss_develop
   pool: 5
-  username: postgres
-  password: PostgreSQL
+  username:
+  password:
 
 test:
   adapter: postgresql
   encoding: unicode
   database: riverboss_develop
   pool: 5
-  username: postgres
-  password: PostgreSQL
+  username:
+  password:
