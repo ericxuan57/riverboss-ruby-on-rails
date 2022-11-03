@@ -13,7 +13,7 @@
 
 class State < ActiveRecord::Base
 
-  has_many :rivers, order: "name ASC"
+  has_many :rivers, -> { order(name: :asc) }
 
   validates :name, :code, presence: true
 

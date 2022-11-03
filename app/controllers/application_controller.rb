@@ -4,14 +4,14 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :configure_permitted_parameters, if: :devise_controller?
-  # before_filter :authenticate
+  # before_action :authenticate
 
   # Mobile Detection
   has_mobile_fu
 
-  before_filter :force_views
+  before_action :force_views
 
-  before_filter :add_www_subdomain
+  before_action :add_www_subdomain
 
   def location
     if params[:location].blank?

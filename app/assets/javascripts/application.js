@@ -10,17 +10,16 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require_directory .
 //= require jquery
 //= require turbolinks
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require modules
-//= require jquery.ui.sortable
-//= require jquery.ui.autocomplete
-//= require jquery.ui.slider
+//= require jquery-ui/widgets/sortable
+//= require jquery-ui/widgets/autocomplete
+//= require jquery-ui/widgets/slider
 //= require jquery.tmpl
 //= require jquery.placeholder
-//= require ckeditor/override
 //= require ckeditor/init
 //= require imagesloaded.pkgd.min
-//= require_directory .
