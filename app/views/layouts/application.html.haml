@@ -57,7 +57,7 @@
 
     = render "layouts/admin_nav" if admin_signed_in?
 
-    = javascript_include_tag "application", "addOtherFiles", "here", "etc", "data-turbo-track": "reload", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbo-track": "reload", "data-turbolinks-track" => true
     = javascript_include_tag "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-530b4e5e44532e57"
 
     - if Rails.env.production?

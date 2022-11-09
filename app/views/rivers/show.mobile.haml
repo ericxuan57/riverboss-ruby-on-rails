@@ -64,7 +64,9 @@
               = check_nil current_condition["temperature"]
               %span.degrees-f
                 °F
-                = image_tag "weather-icons/#{current_condition["icon"]}"
+                - if current_condition["icon"] && |
+                current_condition["icon"].nil? |
+                  = image_tag "weather-icons/#{current_condition["icon"]}"
           %span.time Now
     %table.weather-record
       %tbody
@@ -107,7 +109,9 @@
                   %td.col2
                     .temprature
                       %span.color>
-                        = image_tag "weather-icons/#{v["icon"]}" if v.present?
+                        - if current_condition["icon"] && |
+                        current_condition["icon"].nil? |
+                          = image_tag "weather-icons/#{v["icon"]}" if v.present?
                         = v["temperature"]
                         °F
                       %span.title= v["short_description"]

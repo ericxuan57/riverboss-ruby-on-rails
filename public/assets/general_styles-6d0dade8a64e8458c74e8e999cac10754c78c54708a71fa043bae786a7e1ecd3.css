@@ -1,0 +1,1999 @@
+@charset "UTF-8";
+/* ---------------------------------------------------------
+   1. General reset
+   2. Common site styles
+   3. form styles
+   ---------------------------------------------------------*/
+/*placeholder style*/
+/* line 10, app/assets/stylesheets/general_styles.css.scss */
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #999;
+}
+
+/* line 15, app/assets/stylesheets/general_styles.css.scss */
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #999;
+}
+
+/* line 20, app/assets/stylesheets/general_styles.css.scss */
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #999;
+  opacity: 1;
+}
+
+/* line 26, app/assets/stylesheets/general_styles.css.scss */
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #999;
+}
+
+/* ---------------------------------------------------------
+ 1.General reset
+---------------------------------------------------------*/
+/* line 35, app/assets/stylesheets/general_styles.css.scss */
+* {
+  max-height: 10000px;
+}
+
+/* line 39, app/assets/stylesheets/general_styles.css.scss */
+img {
+  border-style: none;
+}
+
+/* line 43, app/assets/stylesheets/general_styles.css.scss */
+a {
+  text-decoration: none;
+  color: #06c;
+}
+
+/* line 46, app/assets/stylesheets/general_styles.css.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 49, app/assets/stylesheets/general_styles.css.scss */
+a:active {
+  background-color: transparent;
+}
+
+/* line 54, app/assets/stylesheets/general_styles.css.scss */
+input, textarea, select {
+  font: 100% Arial, Helvetica, sans-serif;
+  vertical-align: middle;
+  color: #000;
+}
+
+/* line 60, app/assets/stylesheets/general_styles.css.scss */
+form, fieldset {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+
+/* line 66, app/assets/stylesheets/general_styles.css.scss */
+header, footer, article, section, nav, figure, aside, main {
+  display: block;
+}
+
+/* line 70, app/assets/stylesheets/general_styles.css.scss */
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 75, app/assets/stylesheets/general_styles.css.scss */
+h1 {
+  line-height: 1;
+}
+
+/*body style*/
+/* line 81, app/assets/stylesheets/general_styles.css.scss */
+body {
+  margin: 0;
+  color: #333;
+  font: 16px / 21px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  min-width: 1041px;
+  background: #e9e9e9;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: none;
+}
+
+/* line 91, app/assets/stylesheets/general_styles.css.scss */
+input[type=file], textarea {
+  -webkit-appearance: none;
+}
+
+/* line 96, app/assets/stylesheets/general_styles.css.scss */
+input[type="image"] {
+  padding: 0;
+  border: none;
+}
+
+/* line 100, app/assets/stylesheets/general_styles.css.scss */
+input[type="reset"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="button"]::-moz-focus-inner {
+  border: 0;
+}
+
+/* line 103, app/assets/stylesheets/general_styles.css.scss */
+input[type="reset"]:focus, input[type="submit"]:focus, input[type="button"]:focus {
+  outline: none;
+}
+
+/* line 106, app/assets/stylesheets/general_styles.css.scss */
+input[type=search] {
+  -webkit-box-sizing: content-box;
+}
+
+/* line 111, app/assets/stylesheets/general_styles.css.scss */
+textarea {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/* line 117, app/assets/stylesheets/general_styles.css.scss */
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  display: none;
+}
+
+/* line 121, app/assets/stylesheets/general_styles.css.scss */
+input[type=search] {
+  -webkit-appearance: none;
+  -webkit-box-sizing: content-box;
+}
+
+/* line 122, app/assets/stylesheets/general_styles.css.scss */
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-search-results-button, input[type=search]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+/* ---------------------------------------------------------
+  2. Сommon site styles
+---------------------------------------------------------*/
+/* line 134, app/assets/stylesheets/general_styles.css.scss */
+#wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/*site header style*/
+/* line 142, app/assets/stylesheets/general_styles.css.scss */
+#header {
+  width: 100%;
+  overflow: hidden;
+  background: #002B4D;
+}
+
+/* line 146, app/assets/stylesheets/general_styles.css.scss */
+#header .holder {
+  width: 1041px;
+  padding: 41px 0 23px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/*logo style*/
+/* line 156, app/assets/stylesheets/general_styles.css.scss */
+.logo {
+  background: url(/assets/logo-becad0103950443b98741aa585fc9e541fab01ea983c10ce99079508ab7f6979.png) no-repeat;
+  width: 262px;
+  height: 90px;
+  float: left;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+/* line 163, app/assets/stylesheets/general_styles.css.scss */
+.logo a {
+  display: block;
+  height: 100%;
+}
+
+/* line 169, app/assets/stylesheets/general_styles.css.scss */
+#header .holder .adsbygoogle {
+  float: right;
+}
+
+/* main informative part styles */
+/* line 175, app/assets/stylesheets/general_styles.css.scss */
+#main {
+  width: 100%;
+  position: relative;
+}
+
+/* line 178, app/assets/stylesheets/general_styles.css.scss */
+#main:before {
+  height: 108px;
+  width: 100%;
+  background: #bfe2ff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  content: "";
+}
+
+/* line 188, app/assets/stylesheets/general_styles.css.scss */
+#main:after {
+  height: 110px;
+  background: #bfe2ff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  z-index: -1;
+}
+
+/* line 200, app/assets/stylesheets/general_styles.css.scss */
+.main-holder {
+  width: 1041px;
+  padding: 13px 0 29px;
+  margin: 0 auto;
+  min-height: 500px;
+}
+
+/* line 205, app/assets/stylesheets/general_styles.css.scss */
+.main-holder:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+/* line 212, app/assets/stylesheets/general_styles.css.scss */
+.content-holder {
+  width: 720px;
+  float: left;
+  margin: 0 15px 0 0;
+}
+
+/* line 218, app/assets/stylesheets/general_styles.css.scss */
+.content-frame {
+  float: left;
+  width: 100%;
+}
+
+/*navigation styles */
+/* line 225, app/assets/stylesheets/general_styles.css.scss */
+#nav {
+  float: left;
+  width: 400px;
+  padding: 12px 0 0 9px;
+  list-style: none;
+  padding: 10px 0 0;
+  margin: 0;
+}
+
+/* line 232, app/assets/stylesheets/general_styles.css.scss */
+#nav > li {
+  float: left;
+  padding: 0;
+  position: relative;
+  margin: 0 3px;
+}
+
+/* line 237, app/assets/stylesheets/general_styles.css.scss */
+#nav > li > a {
+  font: 700 20px / 25px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  color: #06c;
+  text-transform: capitalize;
+  text-decoration: none;
+  padding: 10px 8px;
+}
+
+/* line 244, app/assets/stylesheets/general_styles.css.scss */
+#nav > li.active a, #nav > li:hover a {
+  background: #7bcfff;
+  border-radius: 5px;
+}
+
+/* line 248, app/assets/stylesheets/general_styles.css.scss */
+#nav > li.hover {
+  position: relative;
+}
+
+/* line 251, app/assets/stylesheets/general_styles.css.scss */
+#nav > li:hover .drop {
+  display: block;
+}
+
+/* line 255, app/assets/stylesheets/general_styles.css.scss */
+#nav li.hover .drop {
+  top: 31px;
+}
+
+/* line 258, app/assets/stylesheets/general_styles.css.scss */
+#nav.menu-hard-code .drop {
+  width: auto;
+}
+
+/*#nav > li:hover .drop-down1 { display: block; }*/
+/*.drop1 {
+  width: 129px;
+  height: 70px;
+  position: absolute;
+  left: 0;
+  top: 33px;
+  border-radius: 0 5px 5px;
+  display: none;
+  background: #7bcfff;
+  overflow: hidden;
+  padding: 22px 0 15px 27px;
+  z-index: 100;
+}
+.drop-down1 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.drop-down1 ul li { display: block; }*/
+/*drop down style*/
+/* line 288, app/assets/stylesheets/general_styles.css.scss */
+.drop {
+  position: absolute;
+  left: 0;
+  top: -9999px;
+  z-index: 999;
+  width: 110px !important;
+  border-radius: 0 5px 5px;
+  background: #7bcfff;
+  overflow: hidden;
+  padding: 20px 0 28px 25px;
+  z-index: 100;
+}
+
+/* line 299, app/assets/stylesheets/general_styles.css.scss */
+.drop .col {
+  float: left;
+}
+
+/* line 301, app/assets/stylesheets/general_styles.css.scss */
+.drop .col .content {
+  width: 100%;
+  float: left;
+}
+
+/* line 304, app/assets/stylesheets/general_styles.css.scss */
+.drop .col .content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 308, app/assets/stylesheets/general_styles.css.scss */
+.drop .col .content ul > li {
+  padding: 0;
+  line-height: 20px;
+}
+
+/* line 311, app/assets/stylesheets/general_styles.css.scss */
+.drop .col .content ul > li > a {
+  color: #00213a;
+  font: 700 16px / 20px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+/* line 317, app/assets/stylesheets/general_styles.css.scss */
+.drop .col .content ul > li.active a, .drop .col .content ul > li > a:hover {
+  color: #06c;
+}
+
+/* line 325, app/assets/stylesheets/general_styles.css.scss */
+.drop.states-menu {
+  width: 450px !important;
+}
+
+/* line 328, app/assets/stylesheets/general_styles.css.scss */
+.drop.states-menu li {
+  width: 33.3%;
+  float: left;
+}
+
+/* line 334, app/assets/stylesheets/general_styles.css.scss */
+.drop.regions-menu {
+  width: 450px !important;
+}
+
+/* line 337, app/assets/stylesheets/general_styles.css.scss */
+.drop.regions-menu li {
+  width: 50%;
+  float: left;
+}
+
+/* line 344, app/assets/stylesheets/general_styles.css.scss */
+.menu {
+  width: auto;
+  padding: 10px 0 0 7px;
+  list-style: none;
+  margin: 0;
+  float: left;
+}
+
+/* line 350, app/assets/stylesheets/general_styles.css.scss */
+.menu > li {
+  float: left;
+  padding: 0 13px;
+  position: relative;
+}
+
+/* line 354, app/assets/stylesheets/general_styles.css.scss */
+.menu > li > a {
+  font: 700 20px / 25px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  color: #06c;
+  text-transform: capitalize;
+  padding: 0;
+}
+
+/* line 359, app/assets/stylesheets/general_styles.css.scss */
+.menu > li > a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------------------------------------------------
+  3. search form styles
+---------------------------------------------------------*/
+/* line 370, app/assets/stylesheets/general_styles.css.scss */
+.search-form {
+  float: right;
+  padding: 9px 20px 10px 0;
+}
+
+/* line 374, app/assets/stylesheets/general_styles.css.scss */
+.search-form input[type="search"] {
+  width: 240px;
+  background: #fdfdfd;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 2px 8px 3px;
+  float: left;
+  height: 30px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font: 700 18px / 26px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  outline: none;
+}
+
+/* line 388, app/assets/stylesheets/general_styles.css.scss */
+.search-form input[type="submit"] {
+  background: #c5df82;
+  width: 41px;
+  height: 30px;
+  border: none;
+  border-bottom: 3px solid #aace63;
+  border-radius: 3px;
+  color: #06c;
+  font: 700 16px / 29px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  margin-left: 6px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* line 403, app/assets/stylesheets/general_styles.css.scss */
+.search-form.admin {
+  float: left;
+}
+
+/* line 406, app/assets/stylesheets/general_styles.css.scss */
+.search-form.admin input[type='search'] {
+  width: 350px;
+}
+
+/* main content styles */
+/* line 414, app/assets/stylesheets/general_styles.css.scss */
+#content {
+  width: 680px;
+  background: #fff;
+  float: left;
+  padding: 15px 20px 10px;
+  position: relative;
+}
+
+/* line 422, app/assets/stylesheets/general_styles.css.scss */
+.inner #content {
+  padding: 25px 20px 27px;
+}
+
+/* line 427, app/assets/stylesheets/general_styles.css.scss */
+#content:before {
+  background: url(/assets/sprite-76fcb7d477e053d8ab0201036317a7823eb0e16f41ca2437ca726a6aa520cc0c.png) no-repeat -16px -124px;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 0;
+  right: -45px;
+  content: "";
+}
+
+/* line 436, app/assets/stylesheets/general_styles.css.scss */
+#content:after {
+  background: url(/assets/sprite-76fcb7d477e053d8ab0201036317a7823eb0e16f41ca2437ca726a6aa520cc0c.png) no-repeat -16px -53px;
+  width: 46px;
+  height: 46px;
+  position: absolute;
+  bottom: 0;
+  right: -46px;
+  content: "";
+}
+
+/* line 445, app/assets/stylesheets/general_styles.css.scss */
+#content .my-river-area {
+  overflow: hidden;
+  padding: 0;
+}
+
+/* line 451, app/assets/stylesheets/general_styles.css.scss */
+.my-river-area .head-part {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* line 454, app/assets/stylesheets/general_styles.css.scss */
+.my-river-area .head-part ul {
+  list-style: none;
+  padding: 0 0 0 10px;
+  margin: 0;
+  float: right;
+  overflow: hidden;
+}
+
+/* line 460, app/assets/stylesheets/general_styles.css.scss */
+.my-river-area .head-part ul li {
+  float: left;
+  padding: 0 0 5px;
+  margin: 0 0 0 7px;
+}
+
+/* line 468, app/assets/stylesheets/general_styles.css.scss */
+#content {
+  min-height: 1100px;
+}
+
+/* line 471, app/assets/stylesheets/general_styles.css.scss */
+#content .weather-block {
+  overflow: hidden;
+  margin: 0 0 5px;
+}
+
+/* line 475, app/assets/stylesheets/general_styles.css.scss */
+#content .river-detial1, #content .river-detial {
+  overflow: hidden;
+  margin: 0 0 56px;
+  padding: 7px 0 0;
+}
+
+/* line 480, app/assets/stylesheets/general_styles.css.scss */
+#content .river-detial1 {
+  padding: 0;
+}
+
+/* line 485, app/assets/stylesheets/general_styles.css.scss */
+.weather-block .head-part, .river-detial1 .head-part1, .river-detial .head-part {
+  overflow: hidden;
+  width: 100%;
+  padding: 0 0 10px;
+}
+
+/* line 491, app/assets/stylesheets/general_styles.css.scss */
+.weather-block .head-part .frame {
+  width: 575px;
+  float: left;
+}
+
+/* line 497, app/assets/stylesheets/general_styles.css.scss */
+.head-part .frame1, .head-part .frame {
+  width: 575px;
+  float: left;
+}
+
+/* line 503, app/assets/stylesheets/general_styles.css.scss */
+.weather-block .head-part .frame strong, .head-part1 .frame1 strong, .head-part .frame strong {
+  font: 700 18px / 15px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  color: #666;
+  display: block;
+  margin: 0 0 3px;
+}
+
+/* line 510, app/assets/stylesheets/general_styles.css.scss */
+.weather-block .head-part .frame .date, .head-part1 .frame1 .date1, .head-part .frame .date {
+  font: 14px / 18px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  color: #999;
+  float: left;
+}
+
+/* line 517, app/assets/stylesheets/general_styles.css.scss */
+.weather-block .head-part .frame .date {
+  margin: 0 0 2px;
+}
+
+/* line 520, app/assets/stylesheets/general_styles.css.scss */
+.weather-block .head-part .frame h1 {
+  font: 700 28px / 32px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  color: #333;
+  margin: 5px 0 14px;
+}
+
+/* line 527, app/assets/stylesheets/general_styles.css.scss */
+.head-part .frame h1, .head-part1 .frame1 h1, .my-river-area .head-part h1 {
+  font: 700 28px / 32px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  color: #333;
+  margin: 5px 0 14px;
+}
+
+/* line 533, app/assets/stylesheets/general_styles.css.scss */
+.weather-block .head-part .frame h1, .head-part .frame h1 {
+  margin: 0 0 3px;
+}
+
+/* line 537, app/assets/stylesheets/general_styles.css.scss */
+.head-part1 .frame1 h1 {
+  margin: 0 0 4px;
+}
+
+/* line 541, app/assets/stylesheets/general_styles.css.scss */
+.weather-block .post-box, .river-detial1 .river-box1, .river-detial .river-box {
+  background: #f8f8f8;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #e3e3e3;
+  padding: 32px 11px 27px;
+  overflow: hidden;
+}
+
+/* line 550, app/assets/stylesheets/general_styles.css.scss */
+.river-detial1 .river-box1 {
+  padding: 25px 11px 20px;
+}
+
+/* line 554, app/assets/stylesheets/general_styles.css.scss */
+.weather-block .post-box {
+  padding: 0;
+}
+
+/* line 558, app/assets/stylesheets/general_styles.css.scss */
+.river-box1 .info-part1, .river-box .info-part {
+  width: 228px;
+  float: left;
+  overflow: hidden;
+  margin: 0 10px 0 0;
+}
+
+/* line 565, app/assets/stylesheets/general_styles.css.scss */
+.river-box1 .info-part1 {
+  width: 248px;
+}
+
+/* line 567, app/assets/stylesheets/general_styles.css.scss */
+.river-box1 .info-part1 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 92px;
+  float: left;
+  color: #666;
+}
+
+/* line 577, app/assets/stylesheets/general_styles.css.scss */
+.river-box .info-part ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 92px;
+  float: left;
+  color: #666;
+}
+
+/* line 587, app/assets/stylesheets/general_styles.css.scss */
+.river-box1 .info-part1 ul {
+  margin: 0 0 20px;
+}
+
+/* line 590, app/assets/stylesheets/general_styles.css.scss */
+.river-box1 .info-part1 a {
+  font: 24px / 46px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  padding: 0 0 0 3px;
+  color: #06c;
+}
+
+/* line 597, app/assets/stylesheets/general_styles.css.scss */
+.river-box .info-part a.usgs-link {
+  font: 24px / 46px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  padding: 0 0 0 3px;
+  color: #06c;
+}
+
+/* line 603, app/assets/stylesheets/general_styles.css.scss */
+.river-box1 ul li .arrow, .river-box ul li .arrow {
+  float: right;
+  margin: 16px 2px 0 11px;
+}
+
+/* line 608, app/assets/stylesheets/general_styles.css.scss */
+.river-box1 ul li img, .river-box ul li img {
+  margin: 1px 0 0 8px;
+  float: left;
+}
+
+/* line 613, app/assets/stylesheets/general_styles.css.scss */
+.river-box1 .info-part1 ul li, .river-box .info-part ul li {
+  font: 24px / 46px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  padding: 0 0 0 3px;
+}
+
+/* line 619, app/assets/stylesheets/general_styles.css.scss */
+.river-box1 .info-part1 ul li h2, .river-box1 .info-part1 ul.right1 h2 {
+  font: 700 48px / 46px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  margin: 0 0 11px -3px;
+}
+
+/* line 626, app/assets/stylesheets/general_styles.css.scss */
+.river-box .info-part ul li h2, .river-box .info-part ul.right h2 {
+  font: 700 48px / 46px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  margin: 0 0 11px -3px;
+}
+
+/* line 633, app/assets/stylesheets/general_styles.css.scss */
+.river-box1 .info-part1 ul li h2, .river-box1 .info-part1 ul.right1 h2 {
+  margin: 0 0 8px -3px;
+}
+
+/* line 638, app/assets/stylesheets/general_styles.css.scss */
+.river-box .info-part ul.right {
+  text-align: right;
+  color: #333;
+  width: 125px;
+}
+
+/* line 639, app/assets/stylesheets/general_styles.css.scss */
+.river-box .info-part ul.right h2 {
+  margin: 0 0 11px 2px;
+  text-align: right;
+  color: #333;
+  width: 125px;
+}
+
+/* line 649, app/assets/stylesheets/general_styles.css.scss */
+.river-box .info-part ul.right li.suggest-condition img {
+  float: none;
+  margin: 0;
+  vertical-align: middle;
+}
+
+/* line 658, app/assets/stylesheets/general_styles.css.scss */
+.river-box1 .info-part1 ul.right1 {
+  text-align: right;
+  color: #333;
+  width: 144px;
+}
+
+/* line 659, app/assets/stylesheets/general_styles.css.scss */
+.river-box1 .info-part1 ul.right1 h2 {
+  text-align: right;
+  color: #333;
+  width: 144px;
+  font-size: 42px;
+}
+
+/* line 669, app/assets/stylesheets/general_styles.css.scss */
+.river-box1 img {
+  float: right;
+  margin: -7px 0 0 0;
+}
+
+/* line 675, app/assets/stylesheets/general_styles.css.scss */
+.river-box img {
+  float: right;
+  margin: -7px 0 0 0;
+}
+
+/* line 680, app/assets/stylesheets/general_styles.css.scss */
+.river-box1 img {
+  margin: 4px 0 0;
+}
+
+/* line 686, app/assets/stylesheets/general_styles.css.scss */
+.river-box .info-part ul li.fair-high a, .river-box .info-part ul li.fair-low a {
+  color: #f26522;
+}
+
+/* line 689, app/assets/stylesheets/general_styles.css.scss */
+.river-box .info-part ul li.good a {
+  color: #00a555;
+}
+
+/* line 694, app/assets/stylesheets/general_styles.css.scss */
+.river-box .info-part ul li.high a, .river-box .info-part ul li.low a {
+  color: #bc0e0d;
+}
+
+/* line 698, app/assets/stylesheets/general_styles.css.scss */
+.weather-block .post-box .post {
+  border: 0;
+  border-top: 1px solid #e3e3e3;
+  padding: 27px 10px 25px;
+  overflow: hidden;
+}
+
+/* line 699, app/assets/stylesheets/general_styles.css.scss */
+.weather-block .post-box .post:first-child {
+  border: none;
+}
+
+/* line 706, app/assets/stylesheets/general_styles.css.scss */
+.weather-block .post-box .post ul {
+  list-style: none;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0;
+  margin: 0 9px 0 0;
+  width: 285px;
+}
+
+/* line 713, app/assets/stylesheets/general_styles.css.scss */
+.weather-block .post-box .post ul li {
+  width: 90px;
+  display: inline-block;
+  vertical-align: middle;
+  font: 700 18px / 21px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+}
+
+/* line 718, app/assets/stylesheets/general_styles.css.scss */
+.weather-block .post-box .post ul li img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 722, app/assets/stylesheets/general_styles.css.scss */
+.weather-block .post-box .post ul li .value-area {
+  font: 700 24px / 26px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  color: #f33;
+  text-align: center;
+}
+
+/* line 731, app/assets/stylesheets/general_styles.css.scss */
+.weather-block .post-box .post:nth-child(odd) ul li .value-area {
+  color: #33f;
+}
+
+/* line 734, app/assets/stylesheets/general_styles.css.scss */
+.weather-block .post-box .post .text-part {
+  font: 16px / 18px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  color: #333;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  width: 350px;
+}
+
+/* line 741, app/assets/stylesheets/general_styles.css.scss */
+.weather-block .post-box .post .text-part p {
+  margin: 0;
+}
+
+/* line 745, app/assets/stylesheets/general_styles.css.scss */
+.weather-block .post-box .post ul li .value-area span {
+  font: 18px / 20px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  color: #333;
+  display: block;
+}
+
+/* line 752, app/assets/stylesheets/general_styles.css.scss */
+#content .forecast-block {
+  overflow: hidden;
+  margin: 0;
+}
+
+/* line 755, app/assets/stylesheets/general_styles.css.scss */
+#content .forecast-block h2 {
+  font: 24px / 46px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  color: #06c;
+  margin: 0 0 33px;
+}
+
+/* line 760, app/assets/stylesheets/general_styles.css.scss */
+#content .forecast-block img {
+  display: block;
+}
+
+/* line 765, app/assets/stylesheets/general_styles.css.scss */
+.btn {
+  background: #c5df82;
+  text-align: center;
+  border: none;
+  border-bottom: 3px solid #aace63;
+  border-radius: 3px;
+  color: #06c;
+  height: 26px;
+  padding: 8px 5px 0 5px;
+  font: 700 16px / 21px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* line 778, app/assets/stylesheets/general_styles.css.scss */
+.btn:hover {
+  text-decoration: none;
+}
+
+/* line 783, app/assets/stylesheets/general_styles.css.scss */
+.btn.small {
+  font-size: 14px;
+  padding: 5px 5px 3px;
+}
+
+/* line 788, app/assets/stylesheets/general_styles.css.scss */
+.river-detial .head-part .btn, .my-river-area .head-part .btn {
+  width: 91px;
+  float: right;
+  padding: 8px 0 0;
+}
+
+/* line 794, app/assets/stylesheets/general_styles.css.scss */
+.my-river-area .head-part .btn.auto {
+  width: auto;
+  padding: 8px 5px 0 5px;
+}
+
+/* line 799, app/assets/stylesheets/general_styles.css.scss */
+.my-river-area .head-part form {
+  float: right;
+}
+
+/* line 803, app/assets/stylesheets/general_styles.css.scss */
+.river-detial .head-part .btn {
+  font: 700 16px / 16px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  height: 37px;
+}
+
+/* line 809, app/assets/stylesheets/general_styles.css.scss */
+#content .my-river-area a {
+  text-decoration: none;
+}
+
+/*two columns style*/
+/* line 815, app/assets/stylesheets/general_styles.css.scss */
+#two-columns {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* line 818, app/assets/stylesheets/general_styles.css.scss */
+#two-columns .column {
+  width: 300px;
+  float: left;
+  margin: 0 0 0 62px;
+  font: 16px / 21px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+/* line 819, app/assets/stylesheets/general_styles.css.scss */
+#two-columns .column:first-child {
+  margin: 0;
+}
+
+/* line 827, app/assets/stylesheets/general_styles.css.scss */
+#two-columns .column h2 {
+  font: 28px / 31px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  color: #000;
+  margin: 0 0 4px;
+  text-transform: capitalize;
+}
+
+/* line 833, app/assets/stylesheets/general_styles.css.scss */
+#two-columns .column p {
+  margin: 0 0 32px;
+}
+
+/* line 836, app/assets/stylesheets/general_styles.css.scss */
+#two-columns .column ul li p {
+  margin: 0 0 24px;
+}
+
+/* line 842, app/assets/stylesheets/general_styles.css.scss */
+.social-network span a {
+  color: #06c;
+  text-decoration: none;
+}
+
+/* line 848, app/assets/stylesheets/general_styles.css.scss */
+#two-columns .column ul li .head-part a, #two-columns .column p a {
+  color: #06c;
+  text-decoration: none;
+}
+
+/* line 852, app/assets/stylesheets/general_styles.css.scss */
+#two-columns .column ul li .head-part a {
+  float: left;
+}
+
+/* line 854, app/assets/stylesheets/general_styles.css.scss */
+#two-columns .column ul li .head-part a:hover {
+  text-decoration: underline;
+}
+
+/* line 860, app/assets/stylesheets/general_styles.css.scss */
+.social-network span a:hover {
+  text-decoration: underline;
+}
+
+/* line 865, app/assets/stylesheets/general_styles.css.scss */
+#two-columns .column p a:hover {
+  text-decoration: underline;
+}
+
+/* line 868, app/assets/stylesheets/general_styles.css.scss */
+#two-columns .column .adsbygoogle {
+  margin: 0 0 27px;
+}
+
+/* line 871, app/assets/stylesheets/general_styles.css.scss */
+#two-columns .column ul {
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 877, app/assets/stylesheets/general_styles.css.scss */
+#two-columns .column ul li .head-part {
+  overflow: hidden;
+}
+
+/* line 879, app/assets/stylesheets/general_styles.css.scss */
+#two-columns .column ul li .head-part span {
+  color: #999;
+  padding: 0 0 0 10px;
+  position: relative;
+  margin: 0 0 0 3px;
+}
+
+/* line 884, app/assets/stylesheets/general_styles.css.scss */
+#two-columns .column ul li .head-part span:before {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #999;
+  content: "";
+}
+
+/*sidebar style*/
+/* line 902, app/assets/stylesheets/general_styles.css.scss */
+#sidebar {
+  width: 300px;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 100;
+  padding: 2px 0 0 6px;
+}
+
+/* line 909, app/assets/stylesheets/general_styles.css.scss */
+#sidebar .adsbygoogle {
+  margin: 0 0 31px;
+}
+
+/* line 912, app/assets/stylesheets/general_styles.css.scss */
+#sidebar .social-network {
+  background: #666;
+  border-bottom: 3px solid #333;
+  padding: 10px 6px 6px;
+  text-align: center;
+  margin: 0 0 34px;
+}
+
+/* line 918, app/assets/stylesheets/general_styles.css.scss */
+#sidebar .social-network .frame {
+  overflow: hidden;
+  padding: 0;
+}
+
+/*social network style*/
+/* line 927, app/assets/stylesheets/general_styles.css.scss */
+.space-occupier {
+  height: 100px;
+}
+
+/* line 932, app/assets/stylesheets/general_styles.css.scss */
+.social-network .link-holder {
+  margin: 5px 10px;
+  text-align: left;
+}
+
+/* line 936, app/assets/stylesheets/general_styles.css.scss */
+.social-network .link-holder a {
+  font: 20px / 16px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+/* line 943, app/assets/stylesheets/general_styles.css.scss */
+.social-network .frame em, .social-network .frame .link {
+  font: 22px / 20px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  color: #fff;
+  float: left;
+  padding: 8px 3px 0 8px;
+}
+
+/* line 950, app/assets/stylesheets/general_styles.css.scss */
+.social-network .frame:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 956, app/assets/stylesheets/general_styles.css.scss */
+.social-network .frame h4 {
+  float: left;
+  margin: 8px 8px 0 0;
+}
+
+/* line 961, app/assets/stylesheets/general_styles.css.scss */
+.social-network .frame ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 -4px;
+  float: left;
+  width: 118px;
+}
+
+/* line 967, app/assets/stylesheets/general_styles.css.scss */
+.social-network .frame ul li {
+  float: left;
+  padding: 0 0 5px 7px;
+}
+
+/* line 970, app/assets/stylesheets/general_styles.css.scss */
+.social-network .frame ul li a {
+  background: url(/assets/sprite-76fcb7d477e053d8ab0201036317a7823eb0e16f41ca2437ca726a6aa520cc0c.png) no-repeat;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 978, app/assets/stylesheets/general_styles.css.scss */
+.social-network .frame ul li a.twitter {
+  background-position: -40px 0;
+}
+
+/* line 981, app/assets/stylesheets/general_styles.css.scss */
+.social-network .frame ul li a.linkedin {
+  background-position: -80px 0;
+}
+
+/* line 988, app/assets/stylesheets/general_styles.css.scss */
+.social-network strong {
+  font: 18px / 20px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  color: #ccc;
+}
+
+/* line 991, app/assets/stylesheets/general_styles.css.scss */
+.social-network strong a {
+  color: #7bcfff;
+  text-decoration: none;
+}
+
+/* line 994, app/assets/stylesheets/general_styles.css.scss */
+.social-network strong a:hover {
+  text-decoration: underline;
+}
+
+/* line 1001, app/assets/stylesheets/general_styles.css.scss */
+.popular-rivers {
+  overflow: hidden;
+  margin: 0 0 30px;
+}
+
+/* line 1006, app/assets/stylesheets/general_styles.css.scss */
+.acount-area h2, .news-letter h2, .popular-rivers h2 {
+  font: 28px / 31px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  color: #000;
+  margin: 0 0 9px;
+  text-transform: capitalize;
+}
+
+/* line 1013, app/assets/stylesheets/general_styles.css.scss */
+.acount-area ul, .popular-rivers ul {
+  overflow: hidden;
+}
+
+/* line 1017, app/assets/stylesheets/general_styles.css.scss */
+.acount-area ul, .popular-rivers ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 1023, app/assets/stylesheets/general_styles.css.scss */
+.acount-area ul li, .popular-rivers ul li {
+  padding: 0;
+}
+
+/* line 1027, app/assets/stylesheets/general_styles.css.scss */
+.acount-area ul li a, .popular-rivers ul li a {
+  color: #06c;
+  font: 16px / 24px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+/* line 1033, app/assets/stylesheets/general_styles.css.scss */
+.acount-area ul li.active a, .popular-rivers ul li.active a, .acount-area ul li a:hover, .popular-rivers ul li a:hover {
+  font-weight: 700;
+}
+
+/* line 1037, app/assets/stylesheets/general_styles.css.scss */
+.news-letter {
+  margin: 0 0 10px;
+  font: 16px / 24px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+/* line 1041, app/assets/stylesheets/general_styles.css.scss */
+.news-letter:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+/* line 1046, app/assets/stylesheets/general_styles.css.scss */
+.news-letter p {
+  margin: 0 0 3px;
+}
+
+/* ---------------------------------------------------------
+  3. email form styles
+---------------------------------------------------------*/
+/* line 1055, app/assets/stylesheets/general_styles.css.scss */
+.email-form {
+  float: left;
+  padding: 9px 20px 10px 0;
+}
+
+/* line 1059, app/assets/stylesheets/general_styles.css.scss */
+.email-form input[type="email"] {
+  width: 203px;
+  background: #fdfdfd;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0 7px;
+  color: #999;
+  height: 26px;
+  margin: 0 2px 0 0;
+  font: 700 18px / 26px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  outline: none;
+}
+
+/* line 1071, app/assets/stylesheets/general_styles.css.scss */
+.email-form input[type="submit"] {
+  background: #c5df82;
+  width: 41px;
+  height: 31px;
+  border: none;
+  border-bottom: 3px solid #aace63;
+  border-radius: 3px;
+  color: #06c;
+  font: 700 16px / 29px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  margin: 0 0 0 6px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* line 1087, app/assets/stylesheets/general_styles.css.scss */
+.acount-area {
+  overflow: hidden;
+  margin: 0 0 34px;
+}
+
+/* footer styles */
+/* line 1094, app/assets/stylesheets/general_styles.css.scss */
+#footer {
+  width: 100%;
+  overflow: hidden;
+  background: #002B4D;
+}
+
+/* line 1098, app/assets/stylesheets/general_styles.css.scss */
+#footer .holder {
+  width: 1021px;
+  padding: 20px 0 15px 20px;
+  margin: 0 auto;
+  overflow: hidden;
+  font: 16px / 24px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  color: #999;
+  text-transform: capitalize;
+}
+
+/* line 1106, app/assets/stylesheets/general_styles.css.scss */
+#footer .holder p {
+  margin: 0;
+  float: left;
+}
+
+/* line 1109, app/assets/stylesheets/general_styles.css.scss */
+#footer .holder p a {
+  font: 16px / 24px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  color: #999;
+  padding: 0 5px 0 0;
+  text-transform: capitalize;
+}
+
+/* line 1116, app/assets/stylesheets/general_styles.css.scss */
+#footer .holder .link-area {
+  float: left;
+  padding: 0;
+  list-style: none;
+  margin: 0 0 0 29px;
+  overflow: hidden;
+}
+
+/* line 1126, app/assets/stylesheets/general_styles.css.scss */
+.link-area li {
+  float: left;
+  padding: 0 8px;
+}
+
+/* line 1129, app/assets/stylesheets/general_styles.css.scss */
+.link-area li a {
+  font: 16px / 24px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  color: #06c;
+  text-transform: capitalize;
+}
+
+/* line 1136, app/assets/stylesheets/general_styles.css.scss */
+.weak {
+  font-size: 60%;
+}
+
+/* line 1140, app/assets/stylesheets/general_styles.css.scss */
+.pagination {
+  font-size: 18px;
+  text-align: center;
+}
+
+/* line 1144, app/assets/stylesheets/general_styles.css.scss */
+.pagination span {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+/* line 1150, app/assets/stylesheets/general_styles.css.scss */
+.region-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* line 1155, app/assets/stylesheets/general_styles.css.scss */
+.region-list li {
+  margin: 20px 0;
+}
+
+/* line 1158, app/assets/stylesheets/general_styles.css.scss */
+.region-list li a {
+  font-size: 20px;
+}
+
+/* line 1164, app/assets/stylesheets/general_styles.css.scss */
+.states-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* line 1169, app/assets/stylesheets/general_styles.css.scss */
+.states-list li {
+  width: 25%;
+  font-size: 18px;
+  float: left;
+  margin: 5px 0;
+}
+
+/* line 1177, app/assets/stylesheets/general_styles.css.scss */
+.rivers-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* line 1182, app/assets/stylesheets/general_styles.css.scss */
+.rivers-list li {
+  width: 100%;
+  font-size: 20px;
+  float: left;
+  margin: 15px 0;
+}
+
+/* line 1190, app/assets/stylesheets/general_styles.css.scss */
+.helper-text {
+  margin-top: 10px;
+  color: #555;
+}
+
+/* line 1195, app/assets/stylesheets/general_styles.css.scss */
+#add_river_result {
+  margin: 20px 0;
+}
+
+/* line 1198, app/assets/stylesheets/general_styles.css.scss */
+#add_river_result .river {
+  padding: 15px 0;
+  width: 100%;
+  float: left;
+  border-bottom: 1px solid #bbb;
+}
+
+/* line 1204, app/assets/stylesheets/general_styles.css.scss */
+#add_river_result .river:first-of-type {
+  border-top: 1px solid #bbb;
+}
+
+/* line 1209, app/assets/stylesheets/general_styles.css.scss */
+#add_river_result .form-holder {
+  float: right;
+}
+
+/* line 1213, app/assets/stylesheets/general_styles.css.scss */
+#add_river_result .name {
+  width: auto;
+  float: left;
+}
+
+/* line 1218, app/assets/stylesheets/general_styles.css.scss */
+#add_river_result .drag-handle {
+  display: inline-block;
+  margin-right: 10px;
+  color: #06c;
+  cursor: crosshair;
+}
+
+/* line 1226, app/assets/stylesheets/general_styles.css.scss */
+.sortable-placeholder {
+  float: left;
+  background: #dedede;
+  width: 100%;
+  height: 50px;
+  position: relative;
+}
+
+/* line 1233, app/assets/stylesheets/general_styles.css.scss */
+.sortable-placeholder:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: 50px;
+  content: 'Drop Here';
+  font-size: 22px;
+  text-align: center;
+  color: #999;
+}
+
+/* line 1245, app/assets/stylesheets/general_styles.css.scss */
+.post {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #eee;
+}
+
+/* line 1250, app/assets/stylesheets/general_styles.css.scss */
+.post .created-date {
+  text-align: right;
+  font-size: 12px;
+  color: #bbb;
+}
+
+/* line 1257, app/assets/stylesheets/general_styles.css.scss */
+#error_explanation {
+  color: red;
+}
+
+/* line 1261, app/assets/stylesheets/general_styles.css.scss */
+.error {
+  margin: -15px 0 20px;
+  display: block;
+}
+
+/* line 1266, app/assets/stylesheets/general_styles.css.scss */
+.page-loading {
+  background: rgba(255, 255, 255, 0.75);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 99999999;
+  /* :not(:required) hides this rule from IE9 and below */
+}
+
+/* line 1275, app/assets/stylesheets/general_styles.css.scss */
+.page-loading.show {
+  display: block;
+}
+
+/* line 1280, app/assets/stylesheets/general_styles.css.scss */
+.page-loading:after {
+  content: '';
+  -webkit-animation: three-quarters 1250ms infinite linear;
+  -moz-animation: three-quarters 1250ms infinite linear;
+  animation: three-quarters 1250ms infinite linear;
+  border: 8px solid #9BC531;
+  border-right-color: transparent;
+  border-radius: 16px;
+  box-sizing: border-box;
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  margin: -16px 0 0 -16px;
+  top: 50%;
+  left: 50%;
+}
+
+/* line 1295, app/assets/stylesheets/general_styles.css.scss */
+.spinner {
+  -webkit-animation: three-quarters 1250ms infinite linear;
+  -moz-animation: three-quarters 1250ms infinite linear;
+  animation: three-quarters 1250ms infinite linear;
+  border: 5px solid #9BC531;
+  border-right-color: transparent;
+  border-radius: 16px;
+  box-sizing: border-box;
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+
+/* line 1306, app/assets/stylesheets/general_styles.css.scss */
+.spinner.show {
+  display: block;
+}
+
+/* line 1311, app/assets/stylesheets/general_styles.css.scss */
+.spinner-holder {
+  position: relative;
+}
+
+/* line 1314, app/assets/stylesheets/general_styles.css.scss */
+.spinner-holder .spinner {
+  position: absolute;
+  top: 5px;
+  left: 340px;
+}
+
+/* line 1318, app/assets/stylesheets/general_styles.css.scss */
+.spinner-holder .spinner.top-margined {
+  top: 25px;
+}
+
+@-webkit-keyframes three-quarters {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes three-quarters {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes three-quarters {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes three-quarters {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/* line 1331, app/assets/stylesheets/general_styles.css.scss */
+.alert {
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  margin-left: -160px;
+  width: 300px;
+  border-radius: 4px;
+  color: white;
+  padding: 20px 30px;
+  z-index: 99999;
+  font-size: 20px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 15px black;
+}
+
+/* line 1344, app/assets/stylesheets/general_styles.css.scss */
+.alert.alert-success {
+  background: #aace63;
+}
+
+/* line 1348, app/assets/stylesheets/general_styles.css.scss */
+.alert.alert-error {
+  background: red;
+}
+
+/* line 1353, app/assets/stylesheets/general_styles.css.scss */
+.river-graph {
+  position: fixed;
+  left: 30%;
+  top: 25%;
+  display: none;
+  border: solid 0px #fff;
+  padding: 0px;
+  margin: 0;
+  -webkit-box-shadow: 0px 0px 15px 5000px rgba(84, 84, 84, 0.3);
+  -moz-box-shadow: 0px 0px 15px 5000px rgba(84, 84, 84, 0.3);
+  box-shadow: 0px 0px 15px 5000px rgba(84, 84, 84, 0.3);
+  z-index: 99999;
+}
+
+/* line 1366, app/assets/stylesheets/general_styles.css.scss */
+.river-graph img {
+  margin: 0 !important;
+}
+
+/* line 1371, app/assets/stylesheets/general_styles.css.scss */
+.condition {
+  margin-bottom: 70px;
+}
+
+/* line 1374, app/assets/stylesheets/general_styles.css.scss */
+.condition input {
+  display: inline-block !important;
+  width: 75px !important;
+  top: 10px;
+  position: relative;
+}
+
+/* line 1380, app/assets/stylesheets/general_styles.css.scss */
+.condition input:first-of-type {
+  margin-left: 25px;
+}
+
+/* line 1386, app/assets/stylesheets/general_styles.css.scss */
+.ui-slider {
+  background: #ddd;
+  height: 10px;
+  width: 400px;
+  border-radius: 4px;
+  position: relative;
+}
+
+/* line 1393, app/assets/stylesheets/general_styles.css.scss */
+.ui-slider .ui-slider-range {
+  background: #9BC531;
+  height: 10px;
+  position: absolute;
+}
+
+/* line 1399, app/assets/stylesheets/general_styles.css.scss */
+.ui-slider .ui-slider-handle {
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  background: #bbb;
+  margin: -2px 0 0 -7px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* line 1408, app/assets/stylesheets/general_styles.css.scss */
+.ui-slider .ui-slider-handle:hover {
+  text-decoration: none;
+}
+
+/* line 1412, app/assets/stylesheets/general_styles.css.scss */
+.ui-slider .ui-slider-handle:after {
+  content: "Low";
+  color: #bc0e0d;
+  font-size: 14px;
+  width: 50px;
+  display: block;
+  background: #eee;
+  border-radius: 4px;
+  text-align: center;
+  bottom: -20px;
+  left: -15px;
+  position: relative;
+}
+
+/* line 1425, app/assets/stylesheets/general_styles.css.scss */
+.ui-slider .ui-slider-handle:focus {
+  outline: none;
+}
+
+/* line 1430, app/assets/stylesheets/general_styles.css.scss */
+.ui-slider .ui-slider-handle:last-of-type:after {
+  content: "High";
+}
+
+/* line 1437, app/assets/stylesheets/general_styles.css.scss */
+.modal {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+  display: none;
+}
+
+/* line 1446, app/assets/stylesheets/general_styles.css.scss */
+.modal .inner-modal {
+  width: 660px;
+  height: 410px;
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: -225px 0 0 -350px;
+  background: #f4f4f4;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* line 1458, app/assets/stylesheets/general_styles.css.scss */
+.modal .inner-modal #modal_close {
+  position: absolute;
+  content: '';
+  width: 30px;
+  height: 32px;
+  background: url(/assets/close-4699d37a721a911d17630a57ddfd193fe5a6c3a17702629a5efe7f78b3d0ba15.png) no-repeat;
+  top: -10px;
+  right: -10px;
+  cursor: pointer;
+}
+
+/* line 1471, app/assets/stylesheets/general_styles.css.scss */
+.river-condition-form h2 {
+  margin: 0;
+}
+
+/* line 1474, app/assets/stylesheets/general_styles.css.scss */
+.river-condition-form p {
+  font-size: 18px;
+  margin: 25px 0 5px;
+}
+
+/* line 1479, app/assets/stylesheets/general_styles.css.scss */
+.river-condition-form .row {
+  *zoom: 1;
+  margin: 20px 0;
+}
+
+/* line 17, lib/assets/stylesheets/bourbon/addons/_clearfix.scss */
+.river-condition-form .row:before, .river-condition-form .row:after {
+  content: " ";
+  display: table;
+}
+
+/* line 23, lib/assets/stylesheets/bourbon/addons/_clearfix.scss */
+.river-condition-form .row:after {
+  clear: both;
+}
+
+/* line 1483, app/assets/stylesheets/general_styles.css.scss */
+.river-condition-form .row .left {
+  width: 30%;
+  float: left;
+}
+
+/* line 1488, app/assets/stylesheets/general_styles.css.scss */
+.river-condition-form .row .right {
+  width: 70%;
+  float: right;
+}
+
+/* line 1492, app/assets/stylesheets/general_styles.css.scss */
+.river-condition-form .row .right.condition {
+  margin-bottom: 40px;
+}
+
+/* line 1494, app/assets/stylesheets/general_styles.css.scss */
+.river-condition-form .row .right input {
+  margin-left: 0 !important;
+}
+
+/* line 1501, app/assets/stylesheets/general_styles.css.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 1505, app/assets/stylesheets/general_styles.css.scss */
+.fair-high, .fair-low {
+  color: #f26522;
+}
+
+/* line 1507, app/assets/stylesheets/general_styles.css.scss */
+.good {
+  color: #00a555;
+}
+
+/* line 1509, app/assets/stylesheets/general_styles.css.scss */
+.high, .low {
+  color: #bc0e0d;
+}
+
+/* line 1511, app/assets/stylesheets/general_styles.css.scss */
+.rader-img {
+  border: 1px solid #000;
+}
+
+/* line 1513, app/assets/stylesheets/general_styles.css.scss */
+.side-login-form {
+  *zoom: 1;
+}
+
+/* line 17, lib/assets/stylesheets/bourbon/addons/_clearfix.scss */
+.side-login-form:before, .side-login-form:after {
+  content: " ";
+  display: table;
+}
+
+/* line 23, lib/assets/stylesheets/bourbon/addons/_clearfix.scss */
+.side-login-form:after {
+  clear: both;
+}
+
+/* line 1517, app/assets/stylesheets/general_styles.css.scss */
+.side-login-form .inputs input {
+  display: block;
+  width: 275px;
+}
+
+/* line 1523, app/assets/stylesheets/general_styles.css.scss */
+.side-login-form .form-actions {
+  float: left;
+}
+
+/* line 1526, app/assets/stylesheets/general_styles.css.scss */
+.side-login-form .form-actions .btn {
+  padding: 8px 0 0;
+  height: 34px;
+  width: 91px;
+}
+
+/* line 1533, app/assets/stylesheets/general_styles.css.scss */
+.side-login-form .links {
+  float: right;
+  text-align: right;
+  margin-right: 10px;
+}
+
+/* line 1538, app/assets/stylesheets/general_styles.css.scss */
+.side-login-form .links a {
+  font-size: 12px;
+}
+
+/* line 1544, app/assets/stylesheets/general_styles.css.scss */
+#not_available {
+  display: none;
+}
+
+/* line 1548, app/assets/stylesheets/general_styles.css.scss */
+.hint {
+  margin-top: -20px;
+  display: block;
+  font-size: 12px;
+  margin-bottom: 20px;
+  color: gray;
+}
+
+/* line 1556, app/assets/stylesheets/general_styles.css.scss */
+.forgot_password {
+  float: left;
+  top: 4px;
+  position: relative;
+  margin-left: 90px;
+}
+
+/* line 1563, app/assets/stylesheets/general_styles.css.scss */
+.user_remember_me {
+  float: left;
+}
+
+/* line 1567, app/assets/stylesheets/general_styles.css.scss */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 1573, app/assets/stylesheets/general_styles.css.scss */
+.row {
+  width: 100%;
+}
+
+/* line 1576, app/assets/stylesheets/general_styles.css.scss */
+.row .span6 {
+  width: 50%;
+  float: left;
+}
+
+/* line 1582, app/assets/stylesheets/general_styles.css.scss */
+.contact-details {
+  padding-left: 30px;
+  max-width: 240px;
+  font-size: 18px;
+}
+
+/* line 1587, app/assets/stylesheets/general_styles.css.scss */
+.contact-details h3 {
+  margin-bottom: 5px;
+}
+
+/* line 1591, app/assets/stylesheets/general_styles.css.scss */
+.contact-details .city {
+  margin-bottom: 5px;
+}
+
+/* line 1595, app/assets/stylesheets/general_styles.css.scss */
+.contact-details .heading {
+  margin: 20px 0 10px;
+}
+
+/* line 1600, app/assets/stylesheets/general_styles.css.scss */
+.no-bot-margin {
+  margin-bottom: 0 !important;
+}

@@ -1,0 +1,44 @@
+/* line 2, app/assets/stylesheets/admin_styles.css.scss */
+body.admin #wrapper {
+  margin-top: 40px;
+}
+
+/* line 6, app/assets/stylesheets/admin_styles.css.scss */
+body.admin nav.admin-menu {
+  position: fixed;
+  width: 100%;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+/* line 14, app/assets/stylesheets/admin_styles.css.scss */
+body.admin nav.admin-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+
+/* line 20, app/assets/stylesheets/admin_styles.css.scss */
+body.admin nav.admin-menu ul li {
+  float: left;
+  line-height: 40px;
+  color: #aaa;
+}
+
+/* line 25, app/assets/stylesheets/admin_styles.css.scss */
+body.admin nav.admin-menu ul li a {
+  line-height: 40px;
+  color: #ddd;
+  display: inline-block;
+  margin: 0 30px;
+  font-size: 25px;
+}
+
+/* line 32, app/assets/stylesheets/admin_styles.css.scss */
+body.admin nav.admin-menu ul li a:hover {
+  color: white;
+}

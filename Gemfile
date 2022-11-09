@@ -91,6 +91,9 @@ gem 'turbolinks'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
+# Use sprockets as assets compiler
+gem 'sprockets', '~> 4.0'
+
 gem 'tzinfo-data'
 
 # Unicorm server instead of default rails server

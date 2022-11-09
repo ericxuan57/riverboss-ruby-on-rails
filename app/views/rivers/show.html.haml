@@ -64,7 +64,9 @@
           %li Sunset
         %ul.right1.sunrise-sunset{data: {location: "#{@river.city} #{@river.state.name}"}}
           %li
-            = image_tag "weather-icons/#{current_condition["icon"]}", width: 50 if current_condition.present?
+            - if current_condition["icon"] && |
+              current_condition["icon"].nil? |
+              = image_tag "weather-icons/#{current_condition["icon"]}", width: 50 if current_condition.present?
             %h2= check_nil current_condition["temperature"], "°F"
           %li= check_nil current_condition["feels_like"], "°F"
           %li= check_nil current_condition["wind"]
@@ -85,7 +87,11 @@
         %article.post
           %ul
             %li= k
-            %li= image_tag "weather-icons/#{v["icon"]}", width: 45 if v.present?
+            - if current_condition["icon"] && |
+              current_condition["icon"].nil? |
+              %li= image_tag "weather-icons/#{v["icon"]}", width: 45 if v.present?
+            - else
+              %li= ''
             %li
               .value-area
                 = v["temperature"]

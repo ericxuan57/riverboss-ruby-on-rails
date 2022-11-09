@@ -56,7 +56,12 @@ class PostsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
-      @post = Post.find(params[:id])
+      post = Array(Post.where("slug = '#{params[:id]}'"))
+      post_id = 0
+      post.each do |r|
+        post_id = r.id
+      end
+      @post = Post.find(post_id)
     end
 
     # Only allow a trusted parameter "white list" through.
