@@ -33,8 +33,10 @@
           %td.col4= check_nil r.water_temp
           = find_discharge_status r
           %td.col6
-            = image_tag "weather-icons/#{current_condition["icon"]}", width: 30 if current_condition.present?
-            = (current_condition["temperature"].blank? ? "–" : current_condition["temperature"]) if current_condition.present?
+            - if current_condition["icon"] && |
+              current_condition["icon"].nil? |
+              = image_tag "weather-icons/#{current_condition["icon"]}", width: 30 if current_condition.present?
+              = (current_condition["temperature"].blank? ? "–" : current_condition["temperature"]) if current_condition.present?
           %td.col7
             = image_tag "weather-icons/#{tom_mor_forecast["icon"]}", width: 30 if tom_mor_forecast.present?
             .value-area
@@ -48,6 +50,5 @@
           %td.col9
             %span.sunrise –
             %span.sunset
-
 - else
   %h3 Sorry we coundn't find any river.

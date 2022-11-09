@@ -22,7 +22,7 @@ class RiversController < ApplicationController
   end
 
   def show
-    @river = get_weather_data(Array(River.find params[:id])).first
+    @river = get_weather_data(Array(River.where("slug = '#{params[:id]}'"))).first
     @river.increment
   end
 

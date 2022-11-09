@@ -4,9 +4,9 @@
     .frame
       %em Sign Up / Login with
       %ul
-        = smart_link_to "Facebook", user_omniauth_authorize_path(:facebook), class: "facebook"
-        = smart_link_to "Twitter", user_omniauth_authorize_path(:twitter), class: "twitter"
-        = smart_link_to "LinkedIn", user_omniauth_authorize_path(:linkedin), class: "linkedin"
+        = smart_link_to "Facebook", user_facebook_omniauth_authorize_path, class: "facebook"
+        = smart_link_to "Twitter", user_twitter_omniauth_authorize_path, class: "twitter"
+        = smart_link_to "LinkedIn", user_linkedin_omniauth_authorize_path, class: "linkedin"
     %strong
       Or
       = link_to "register directly", new_user_registration_path(redirect_to: params[:redirect_to])

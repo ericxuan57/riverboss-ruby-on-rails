@@ -28,7 +28,12 @@ class PagesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_page
-      @page = Page.find(params[:id])
+      page = Array(Page.where("slug = '#{params[:id]}'"))
+      page_id = 0
+      page.each do |r|
+        page_id = r.id
+      end
+      @page = Page.find(page_id)
     end
 
     # Only allow a trusted parameter "white list" through.

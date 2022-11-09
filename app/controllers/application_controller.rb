@@ -75,6 +75,7 @@ class ApplicationController < ActionController::Base
     redis = Redis.new(url: "redis://:RUnUMMXb3t2c4CDQDgHbNwRJvaa2vgzVzKHM@a3c15323be0b4d9ea57a5d4bb3fc59e3.publb.rackspaceclouddb.com:6379/")
     # redis = Redis.new(url: "redis://redistogo:b7ceef409eb19d131605aa3645797e1a@hoki.redistogo.com:9912/")
     # redis = Redis.new(host: "127.0.0.1", port: 6379, db: 5)
+    print(redis)
     rivers.each do |r|
       d = redis.hmget "river:#{r.site_no}", "discharge", "gauge_height", "water_temp", "turbidity", "weather", "updated_at"
       r.discharge    = d[0]
