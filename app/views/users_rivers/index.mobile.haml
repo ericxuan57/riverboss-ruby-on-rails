@@ -13,7 +13,7 @@
             .name
               = link_to ur.river.name, river_path(ur.river)
             .form-holder.clearfix
-              = link_to users_river_path(ur), data: {confirm: "Are you sure you want to delete #{ur.river.name}?", method: :delete}, class: "delete" do
+              = button_to users_river_path(ur), method: :delete, class: "delete" do
                 = image_tag "delete.png", width: 24
               = suggest_tag ur.river, "Edit"
               %span.drag-handle= image_tag "drag.png", width: 24

@@ -9,8 +9,8 @@
     - if @users_rivers.any?
       - @users_rivers.each do |ur|
         .river{id: "users_river_#{ur.id}"}
-          .name
-            = link_to users_river_path(ur), data: {confirm: "Are you sure you want to delete #{ur.river.name}?", method: :delete}, class: "delete" do
+          .name{:style => "display: flex"}
+            = button_to users_river_path(ur), method: :delete, class: "delete" do
               = image_tag "delete.png", width: 16
             &nbsp;
             &nbsp;

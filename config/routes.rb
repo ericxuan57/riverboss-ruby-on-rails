@@ -1,5 +1,4 @@
 Riverboss::Application.routes.draw do
-
   mount Ckeditor::Engine => '/ckeditor'
 
   root 'rivers#home_page'
@@ -48,5 +47,5 @@ Riverboss::Application.routes.draw do
     post :sort, on: :collection
   end
 
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", registrations: 'registrations' }, path: '', path_names: {sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: 'user', sign_up: 'signup'}
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", registrations: 'registrations' }, path: '', path_names: {sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: 'user', sign_up: 'signup'}, sign_out_via: [:get]
 end

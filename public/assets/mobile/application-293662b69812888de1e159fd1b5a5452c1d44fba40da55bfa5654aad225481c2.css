@@ -1,0 +1,2058 @@
+/* line 1, app/assets/stylesheets/overrides/autocomplete.css.scss */
+ul.ui-autocomplete {
+  border-radius: 0 0 5px 5px;
+  background: #f8f8f8;
+  border: 1px solid #dfdfdf;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 100;
+}
+
+/* line 11, app/assets/stylesheets/overrides/autocomplete.css.scss */
+ul.ui-autocomplete li.ui-menu-item {
+  display: block;
+  border-top: 1px solid #dfdfdf;
+}
+
+/* line 15, app/assets/stylesheets/overrides/autocomplete.css.scss */
+ul.ui-autocomplete li.ui-menu-item:first-child {
+  border-top: none;
+}
+
+/* line 19, app/assets/stylesheets/overrides/autocomplete.css.scss */
+ul.ui-autocomplete li.ui-menu-item a {
+  display: block;
+  color: #888;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+/* line 25, app/assets/stylesheets/overrides/autocomplete.css.scss */
+ul.ui-autocomplete li.ui-menu-item a:hover, ul.ui-autocomplete li.ui-menu-item a.ui-state-focus, ul.ui-autocomplete li.ui-menu-item a.ui-state-active {
+  background: #dfdfdf;
+}
+
+/* line 32, app/assets/stylesheets/overrides/autocomplete.css.scss */
+.ui-helper-hidden-accessible {
+  display: none;
+}
+/*placeholder style*/
+/* line 5, app/assets/stylesheets/mobile/mobile.css.scss */
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #999;
+}
+
+/* line 10, app/assets/stylesheets/mobile/mobile.css.scss */
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #999;
+}
+
+/* line 15, app/assets/stylesheets/mobile/mobile.css.scss */
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #999;
+  opacity: 1;
+}
+
+/* line 21, app/assets/stylesheets/mobile/mobile.css.scss */
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #999;
+}
+
+/* line 27, app/assets/stylesheets/mobile/mobile.css.scss */
+.search-form ::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #bfe2ff;
+}
+
+/* line 31, app/assets/stylesheets/mobile/mobile.css.scss */
+.search-form:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #bfe2ff;
+}
+
+/* line 35, app/assets/stylesheets/mobile/mobile.css.scss */
+.search-form ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #bfe2ff;
+  opacity: 1;
+}
+
+/* line 40, app/assets/stylesheets/mobile/mobile.css.scss */
+.search-form :-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #bfe2ff;
+}
+
+/* line 46, app/assets/stylesheets/mobile/mobile.css.scss */
+* {
+  max-height: 1000000px;
+}
+
+/* line 47, app/assets/stylesheets/mobile/mobile.css.scss */
+html {
+  box-sizing: border-box;
+  background: #fff;
+  height: 100%;
+}
+
+/* line 52, app/assets/stylesheets/mobile/mobile.css.scss */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* line 53, app/assets/stylesheets/mobile/mobile.css.scss */
+body {
+  font: 17px/21px 'PT Sans Narrow', Arial, Helvetica, sans-serif;
+  color: #333;
+  min-width: 320px;
+  margin: 0;
+  background: #fff;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: none;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 64, app/assets/stylesheets/mobile/mobile.css.scss */
+article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
+  display: block;
+}
+
+/* line 65, app/assets/stylesheets/mobile/mobile.css.scss */
+img {
+  border-style: none;
+}
+
+/* line 66, app/assets/stylesheets/mobile/mobile.css.scss */
+a {
+  text-decoration: none;
+  color: #0066cc;
+}
+
+/* line 70, app/assets/stylesheets/mobile/mobile.css.scss */
+a:hover {
+  text-decoration: none;
+  color: #539ce4;
+}
+
+/* line 74, app/assets/stylesheets/mobile/mobile.css.scss */
+input, textarea, select {
+  font: 100% Arial, Helvetica, sans-serif;
+  vertical-align: middle;
+  color: #ccc;
+}
+
+/* line 79, app/assets/stylesheets/mobile/mobile.css.scss */
+textarea {
+  overflow: auto;
+  resize: vertical;
+  vertical-align: top;
+}
+
+/* line 84, app/assets/stylesheets/mobile/mobile.css.scss */
+form, fieldset {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+
+/* line 89, app/assets/stylesheets/mobile/mobile.css.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* line 93, app/assets/stylesheets/mobile/mobile.css.scss */
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+  *overflow: visible;
+}
+
+/* line 98, app/assets/stylesheets/mobile/mobile.css.scss */
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
+/* line 99, app/assets/stylesheets/mobile/mobile.css.scss */
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* line 100, app/assets/stylesheets/mobile/mobile.css.scss */
+input[type="search"]::-webkit-search-decoration {
+  display: none;
+}
+
+/* line 101, app/assets/stylesheets/mobile/mobile.css.scss */
+q {
+  quotes: none;
+}
+
+/* line 102, app/assets/stylesheets/mobile/mobile.css.scss */
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 106, app/assets/stylesheets/mobile/mobile.css.scss */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 112, app/assets/stylesheets/mobile/mobile.css.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 113, app/assets/stylesheets/mobile/mobile.css.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 114, app/assets/stylesheets/mobile/mobile.css.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 118, app/assets/stylesheets/mobile/mobile.css.scss */
+h4 {
+  margin: 15px 0;
+}
+
+/* line 121, app/assets/stylesheets/mobile/mobile.css.scss */
+#wrapper {
+  height: 100%;
+  display: table;
+  width: 100%;
+}
+
+/* line 126, app/assets/stylesheets/mobile/mobile.css.scss */
+#header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: #00213a;
+  z-index: 9999;
+  height: 49px;
+  text-align: center;
+}
+
+/* line 135, app/assets/stylesheets/mobile/mobile.css.scss */
+.logo {
+  display: inline-block;
+  vertical-align: middle;
+  z-index: 2;
+  padding: 15px 0;
+}
+
+/* line 141, app/assets/stylesheets/mobile/mobile.css.scss */
+.logo a {
+  display: block;
+}
+
+/* line 142, app/assets/stylesheets/mobile/mobile.css.scss */
+.logo img {
+  display: block;
+}
+
+/* line 143, app/assets/stylesheets/mobile/mobile.css.scss */
+#header .image-holder {
+  float: right;
+  width: 49px;
+}
+
+/* line 147, app/assets/stylesheets/mobile/mobile.css.scss */
+#header .image-holder img {
+  width: 100%;
+  display: block;
+}
+
+/* line 151, app/assets/stylesheets/mobile/mobile.css.scss */
+#header .image-holder a {
+  display: block;
+  z-index: 10;
+  position: relative;
+}
+
+/* line 156, app/assets/stylesheets/mobile/mobile.css.scss */
+.opener {
+  float: left;
+  width: 51px;
+  height: 49px;
+  background: #001a2e;
+  position: relative;
+  text-indent: -9999px;
+  overflow: hidden;
+  z-index: 10;
+  display: block;
+}
+
+/* line 167, app/assets/stylesheets/mobile/mobile.css.scss */
+.opener:before,
+.opener:after,
+.opener span {
+  background: #666;
+  border-radius: 4px;
+  position: absolute;
+  top: 16px;
+  left: 14px;
+  right: 14px;
+  height: 3px;
+  margin-top: 6px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+/* line 181, app/assets/stylesheets/mobile/mobile.css.scss */
+.opener:before,
+.opener:after {
+  content: '';
+  top: 10px;
+}
+
+/* line 186, app/assets/stylesheets/mobile/mobile.css.scss */
+.opener:after {
+  top: 22px;
+}
+
+/* line 187, app/assets/stylesheets/mobile/mobile.css.scss */
+.close-btn span,
+.active .opener span {
+  opacity: 0;
+}
+
+/* line 189, app/assets/stylesheets/mobile/mobile.css.scss */
+.opener:hover {
+  opacity: .9;
+}
+
+/* line 190, app/assets/stylesheets/mobile/mobile.css.scss */
+.nav-holder {
+  top: 0;
+  overflow: auto;
+  height: 100%;
+  z-index: 99;
+  left: -270px;
+  width: 270px;
+  position: fixed;
+  transition: all 0.25s ease;
+  -webkit-transition: all 0.25s ease;
+}
+
+/* line 201, app/assets/stylesheets/mobile/mobile.css.scss */
+.nav-holder .header {
+  background: #00213a;
+  z-index: 9999;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 207, app/assets/stylesheets/mobile/mobile.css.scss */
+#wrapper.active .nav-holder {
+  left: 0;
+}
+
+/* line 208, app/assets/stylesheets/mobile/mobile.css.scss */
+#wrapper.active .nav-holder > * {
+  z-index: 2;
+  position: relative;
+}
+
+/* line 212, app/assets/stylesheets/mobile/mobile.css.scss */
+#wrapper.active:after {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  position: fixed;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* line 221, app/assets/stylesheets/mobile/mobile.css.scss */
+.drop {
+  text-align: left;
+}
+
+/* line 222, app/assets/stylesheets/mobile/mobile.css.scss */
+.nav-holder .opener {
+  float: right;
+  width: 53px;
+  height: 48px;
+  position: relative;
+  background: #001a2e;
+  z-index: 99;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+/* line 232, app/assets/stylesheets/mobile/mobile.css.scss */
+.nav-holder .opener:before {
+  position: absolute;
+  top: 9px;
+  left: 18px;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  background: #666;
+}
+
+/* line 242, app/assets/stylesheets/mobile/mobile.css.scss */
+.nav-holder .opener:after {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  width: 10px;
+  height: 3px;
+  background: #001a2e;
+}
+
+/* line 250, app/assets/stylesheets/mobile/mobile.css.scss */
+#nav ul,
+.social-media {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font: 700 18px/22px 'PT Sans Narrow', Arial, Helvetica, sans-serif;
+}
+
+/* line 257, app/assets/stylesheets/mobile/mobile.css.scss */
+.social-media {
+  color: #c6c6c6;
+  font: 10px/14px 'PT Sans Narrow', Arial, Helvetica, sans-serif;
+  background: #00213a;
+}
+
+/* line 262, app/assets/stylesheets/mobile/mobile.css.scss */
+#nav ul li {
+  border-bottom: 1px solid #bfe2ff;
+  text-transform: uppercase;
+  background: #fff;
+}
+
+/* line 267, app/assets/stylesheets/mobile/mobile.css.scss */
+#nav ul li a:after {
+  position: absolute;
+  content: '';
+  background: url(/assets/mobile/arrow-d6a4ac45a1dc8b349034889ff56caeab27c2ec2e15b96e51272d71b8348c88ec.png) no-repeat;
+  background-size: 9px 10px;
+  width: 9px;
+  height: 10px;
+  right: 38px;
+  top: 20px;
+}
+
+/* line 277, app/assets/stylesheets/mobile/mobile.css.scss */
+#nav ul li a {
+  color: #0066cc;
+  padding: 15px 54px 15px 40px;
+  display: block;
+  position: relative;
+}
+
+/* line 283, app/assets/stylesheets/mobile/mobile.css.scss */
+.social-media li {
+  display: inline-block;
+  vertical-align: middle;
+  border-left: 2px solid #003054;
+  width: 32%;
+  background: #00213a;
+  border-bottom: none;
+  height: 52px;
+  text-align: center;
+  padding: 10px 5px;
+}
+
+/* line 294, app/assets/stylesheets/mobile/mobile.css.scss */
+.social-media li a {
+  padding: 0;
+}
+
+/* line 295, app/assets/stylesheets/mobile/mobile.css.scss */
+.social-media li a:after {
+  top: 6px !important;
+  left: 22px !important;
+  right: auto;
+  bottom: auto;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 303, app/assets/stylesheets/mobile/mobile.css.scss */
+.social-media li:first-child {
+  border: none;
+}
+
+/* line 304, app/assets/stylesheets/mobile/mobile.css.scss */
+.social-media .twitter,
+.social-media .facebook {
+  text-indent: -9999px;
+  overflow: hidden;
+  background: url(/assets/mobile/twitter-dd2f7e3a3d3f230d2aed2f139da94dff8f4a86d0528bbb0b696d4d57c9fad327.png) no-repeat;
+  background-size: 23px 18px;
+  width: 23px;
+  height: 18px;
+  display: block;
+  text-align: center;
+  padding: 9px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 318, app/assets/stylesheets/mobile/mobile.css.scss */
+.social-media .facebook {
+  background: url(/assets/mobile/facebook-1c8ccff629ab73fb2a076ce89dcb3f6bb0f2d99737d0b304fcabb72de18353eb.png) no-repeat;
+  background-size: 17px 18px;
+  width: 17px;
+  height: 18px;
+}
+
+/* line 324, app/assets/stylesheets/mobile/mobile.css.scss */
+.social-media li span {
+  display: block;
+  padding: 4px 0 0;
+  text-transform: uppercase;
+}
+
+/* line 329, app/assets/stylesheets/mobile/mobile.css.scss */
+.social-media li .opener {
+  background: none;
+  height: auto;
+  margin: 3px 0 0;
+  color: #c6c6c6;
+}
+
+/* line 335, app/assets/stylesheets/mobile/mobile.css.scss */
+.social-media .opener:before {
+  display: block;
+  height: 14px;
+  left: 10px;
+  margin: 0 auto 4px;
+  position: static;
+  top: -8px !important;
+}
+
+/* line 343, app/assets/stylesheets/mobile/mobile.css.scss */
+#main {
+  padding: 49px 0 50px;
+  position: relative;
+}
+
+/* line 347, app/assets/stylesheets/mobile/mobile.css.scss */
+#content {
+  position: relative;
+}
+
+/* line 348, app/assets/stylesheets/mobile/mobile.css.scss */
+.content-holder {
+  overflow: hidden;
+  padding: 16px 8px 8px 10px;
+  background: #e9f5ff;
+}
+
+/* line 353, app/assets/stylesheets/mobile/mobile.css.scss */
+.inner .content-holder {
+  padding: 11px 8px 15px 10px;
+}
+
+/* line 354, app/assets/stylesheets/mobile/mobile.css.scss */
+.content-holder h1 {
+  font: 700 22px/26px 'PT Sans Narrow', Arial, Helvetica, sans-serif;
+  margin: 0;
+  color: #333;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+/* line 360, app/assets/stylesheets/mobile/mobile.css.scss */
+.content-holder .btn-holder {
+  float: right;
+  margin: -2px 0 0;
+}
+
+/* line 364, app/assets/stylesheets/mobile/mobile.css.scss */
+.content-holder .btn-holder.more-pad {
+  margin-top: 5px;
+}
+
+/* line 368, app/assets/stylesheets/mobile/mobile.css.scss */
+.btn-holder .btn {
+  background: #c5df82;
+  color: #0066cc;
+  font: 700 14px/17px 'PT Sans Narrow', Arial, Helvetica, sans-serif;
+  padding: 7px 6px 5px 6px;
+  margin: 0 0 0 2px;
+  text-transform: uppercase;
+  border: none;
+  -webkit-box-shadow: 0px 2px 1px 0px #aace63;
+  box-shadow: 0px 2px 1px 0px #aace63;
+  border-radius: 3px;
+  text-shadow: 1px 1px 0 #fff;
+  min-width: 73px;
+}
+
+/* line 382, app/assets/stylesheets/mobile/mobile.css.scss */
+.inner .btn-holder .btn {
+  margin: 10px 0 0 2px;
+  padding: 5px 10px 3px 10px;
+  line-height: 100%;
+}
+
+/* line 386, app/assets/stylesheets/mobile/mobile.css.scss */
+.inner .btn-holder .btn.auto {
+  top: 5px;
+  position: relative;
+}
+
+/* line 391, app/assets/stylesheets/mobile/mobile.css.scss */
+.btn-holder .btn:hover,
+table td.col3 .btn:hover {
+  background: #a3cd35;
+}
+
+/* line 393, app/assets/stylesheets/mobile/mobile.css.scss */
+.content-holder .place {
+  font: 700 17px/21px 'PT Sans Narrow', Arial, Helvetica, sans-serif;
+  color: #555;
+  overflow: hidden;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+/* line 399, app/assets/stylesheets/mobile/mobile.css.scss */
+.content-holder .image-holder {
+  margin: 5px 0 0;
+  display: block;
+}
+
+/* line 403, app/assets/stylesheets/mobile/mobile.css.scss */
+.content-holder .image-holder img {
+  vertical-align: top;
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* line 409, app/assets/stylesheets/mobile/mobile.css.scss */
+#content .tempreture {
+  background: #bfe2ff;
+  overflow: hidden;
+  border-top: 1px solid #bfe2ff;
+}
+
+/* line 414, app/assets/stylesheets/mobile/mobile.css.scss */
+.tempreture .header {
+  background: #e9f5ff;
+  overflow: hidden;
+  padding: 22px 12px 13px;
+}
+
+/* line 419, app/assets/stylesheets/mobile/mobile.css.scss */
+.header .size,
+.geo .size {
+  font: 700 18px/21px 'PT Sans Narrow', Arial, Helvetica, sans-serif;
+  color: #555;
+  display: inline-block;
+}
+
+/* line 425, app/assets/stylesheets/mobile/mobile.css.scss */
+.header h2,
+.geo h3 {
+  font: 700 21px/24px 'PT Sans Narrow', Arial, Helvetica, sans-serif;
+  color: #373737;
+  margin: 0;
+  display: inline-block;
+}
+
+/* line 432, app/assets/stylesheets/mobile/mobile.css.scss */
+.tempreture-holder {
+  padding: 12px 14px 9px 20px;
+  overflow: hidden;
+}
+
+/* line 436, app/assets/stylesheets/mobile/mobile.css.scss */
+.tempreture-holder .block {
+  overflow: hidden;
+}
+
+/* line 439, app/assets/stylesheets/mobile/mobile.css.scss */
+.tempreture-holder .right {
+  font: 700 21px/24px 'PT Sans Narrow', Arial, Helvetica, sans-serif;
+  color: #000;
+  float: right;
+  text-shadow: 1px 1px 0 #ffffff;
+  width: 50%;
+  text-align: center;
+}
+
+/* line 447, app/assets/stylesheets/mobile/mobile.css.scss */
+.right .degree {
+  font: 700 40px/44px 'PT Sans Narrow', Arial, Helvetica, sans-serif;
+  color: #000;
+  position: relative;
+  padding: 0 0 0 0;
+  display: block;
+  top: -17px;
+}
+
+/* line 455, app/assets/stylesheets/mobile/mobile.css.scss */
+.right .degree img {
+  position: relative;
+  top: 12px;
+  width: 62px;
+}
+
+/* line 461, app/assets/stylesheets/mobile/mobile.css.scss */
+.right p {
+  font-size: 21px;
+  line-height: 24px;
+}
+
+/* line 466, app/assets/stylesheets/mobile/mobile.css.scss */
+.degrees-f {
+  color: #666666;
+}
+
+/* .right .degree:after{
+  position:absolute;
+  content:'';
+  background:url(/../images/sprite.png) no-repeat -44px -3px;
+  width: 62px;
+  height: 57px;
+  right:18px;
+  top:0;
+} */
+/* line 479, app/assets/stylesheets/mobile/mobile.css.scss */
+.right p {
+  margin: 0 0 10px;
+}
+
+/* line 480, app/assets/stylesheets/mobile/mobile.css.scss */
+.tempreture-holder .time {
+  font: 700 30px/33px 'PT Sans Narrow', Arial, Helvetica, sans-serif;
+  color: #333;
+  margin: 26px 0 0;
+  display: inline-block;
+  text-shadow: 1px 1px 0 #ffffff;
+}
+
+/* line 487, app/assets/stylesheets/mobile/mobile.css.scss */
+.tempreture-holder p {
+  margin: 0 0 10px;
+}
+
+/* line 488, app/assets/stylesheets/mobile/mobile.css.scss */
+#content .geo {
+  padding: 22px 11px 6px;
+  background: #e9f5ff;
+}
+
+/* line 492, app/assets/stylesheets/mobile/mobile.css.scss */
+.geo h2 {
+  font: 700 22px/26px 'PT Sans Narrow', Arial, Helvetica, sans-serif;
+  color: #333;
+  margin: 0 0 3px;
+}
+
+/* line 497, app/assets/stylesheets/mobile/mobile.css.scss */
+.geo .image-holder {
+  width: 100%;
+  display: block;
+  margin: 0 0 20px;
+}
+
+/* line 501, app/assets/stylesheets/mobile/mobile.css.scss */
+.geo .image-holder img {
+  border: 1px solid #000;
+}
+
+/* line 505, app/assets/stylesheets/mobile/mobile.css.scss */
+.geo .image-holder img {
+  vertical-align: top;
+  width: 100%;
+}
+
+/* line 509, app/assets/stylesheets/mobile/mobile.css.scss */
+.table,
+.table thead,
+.table .accordion,
+.table tr,
+.accordion > tr > td {
+  width: 100%;
+  padding: 0;
+}
+
+/* line 517, app/assets/stylesheets/mobile/mobile.css.scss */
+.inner .table tr th {
+  font: 700 21px/24px "PT Sans Narrow",Arial,Helvetica,sans-serif;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+/* line 521, app/assets/stylesheets/mobile/mobile.css.scss */
+.table tr td.col1,
+.table tr th.col1 {
+  width: 37.621% !important;
+  padding: 10px 0 11px 18px !important;
+}
+
+/* line 526, app/assets/stylesheets/mobile/mobile.css.scss */
+.table tr td.col1 {
+  padding: 27px 0 27px 36px !important;
+}
+
+/* line 527, app/assets/stylesheets/mobile/mobile.css.scss */
+.table tr td.col2 {
+  padding: 0 !important;
+}
+
+/* line 528, app/assets/stylesheets/mobile/mobile.css.scss */
+.accordion table tr td {
+  border-left: 1px solid #bfe2ff;
+}
+
+/* line 529, app/assets/stylesheets/mobile/mobile.css.scss */
+.accordion table tr td:first-child {
+  border: none;
+}
+
+/* line 530, app/assets/stylesheets/mobile/mobile.css.scss */
+.accordion tr .col1 {
+  padding: 21px 0 0 26px;
+  width: 30%;
+}
+
+/* line 534, app/assets/stylesheets/mobile/mobile.css.scss */
+.accordion .open {
+  position: relative;
+}
+
+/* line 535, app/assets/stylesheets/mobile/mobile.css.scss */
+.accordion .open:before,
+.accordion .active .open:before {
+  position: absolute;
+  content: '';
+  left: -19px;
+  top: 3px;
+  background-image: url(/assets/mobile/open-acc-89b4c9ef99dd576d8d5a7c231a86062a596f861976bcc113ae0ae26f43e6fbc6.png);
+  background-size: 14px 14px;
+  width: 14px;
+  height: 14px;
+}
+
+/* line 546, app/assets/stylesheets/mobile/mobile.css.scss */
+.accordion .active .open:before {
+  background-image: url(/assets/mobile/close-acc-cfdb6b4aafdd12fab09f4246a7a2312159d11dd35c4bcff2ca46a462e8670f7a.png);
+}
+
+/* line 547, app/assets/stylesheets/mobile/mobile.css.scss */
+.accordion tr .col2 {
+  width: 65%;
+}
+
+/* line 548, app/assets/stylesheets/mobile/mobile.css.scss */
+.accordion tr .col3 {
+  color: #000;
+  width: auto;
+  text-align: left;
+  padding: 5px 21px 20px;
+}
+
+/* line 554, app/assets/stylesheets/mobile/mobile.css.scss */
+table {
+  width: 100%;
+}
+
+/* line 555, app/assets/stylesheets/mobile/mobile.css.scss */
+thead {
+  background: #bfe2ff;
+  color: #333;
+  padding: 0 10px;
+}
+
+/* line 560, app/assets/stylesheets/mobile/mobile.css.scss */
+table th {
+  padding: 10px 10px 4px;
+  font: 700 17px/21px 'PT Sans Narrow', Arial, Helvetica, sans-serif;
+  text-align: left;
+}
+
+/* line 565, app/assets/stylesheets/mobile/mobile.css.scss */
+.inner table th {
+  font: 700 29px/30px "PT Sans Narrow",Arial,Helvetica,sans-serif;
+}
+
+/* line 566, app/assets/stylesheets/mobile/mobile.css.scss */
+.inner table tr td.col1,
+.inner table tr th.col1 {
+  width: 52.353%;
+  border-left: 2px solid #bfe2ff;
+  padding: 6px 0 0 34px;
+}
+
+/* line 572, app/assets/stylesheets/mobile/mobile.css.scss */
+.weather-record tr td.col1 {
+  width: 43% !important;
+  padding: 13px 4px 12px 36px !important;
+}
+
+/* line 576, app/assets/stylesheets/mobile/mobile.css.scss */
+.inner table tr td.col1,
+.inner table td.col2 {
+  padding: 13px 4px 12px 34px;
+}
+
+/* line 578, app/assets/stylesheets/mobile/mobile.css.scss */
+.inner table tr td.col1 {
+  color: #666;
+}
+
+/* line 579, app/assets/stylesheets/mobile/mobile.css.scss */
+.inner table td.col2,
+.inner table th.col2 {
+  width: 46.465%;
+  padding: 9px 0 8px;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+}
+
+/* line 587, app/assets/stylesheets/mobile/mobile.css.scss */
+.indicate,
+.indicator {
+  position: relative;
+  text-shadow: 1px 1px 0 #ffffff;
+}
+
+/* .indicate:after,
+.indicator:after{
+  position:absolute;
+  content:'';
+  right:-13px;
+  top:8px;
+  background:url(/../images/sprite.png) no-repeat -23px -3px;
+  width: 11px;
+  height: 22px;
+} */
+/* line 602, app/assets/stylesheets/mobile/mobile.css.scss */
+table .indicator:after {
+  background-position: -4px -35px;
+  width: 12px;
+  height: 12px;
+  right: -24px;
+  top: 5px;
+}
+
+/* line 609, app/assets/stylesheets/mobile/mobile.css.scss */
+.inner table td .color {
+  color: #bc0e0d;
+}
+
+/* line 610, app/assets/stylesheets/mobile/mobile.css.scss */
+.inner table td.night-weather .color {
+  color: #539ce4;
+}
+
+/* line 611, app/assets/stylesheets/mobile/mobile.css.scss */
+.accordion tr.active {
+  background: #bfe2ff;
+}
+
+/* line 614, app/assets/stylesheets/mobile/mobile.css.scss */
+.accordion tr tr {
+  border: none;
+}
+
+/* line 615, app/assets/stylesheets/mobile/mobile.css.scss */
+table th.col1,
+table th.col3 {
+  text-shadow: 1px 1px 0 #fff;
+}
+
+/* line 617, app/assets/stylesheets/mobile/mobile.css.scss */
+table th.col3 {
+  text-align: center;
+}
+
+/* line 618, app/assets/stylesheets/mobile/mobile.css.scss */
+.col2 .btn, .col2 button {
+  background: #0066cc;
+  color: #fff;
+  border: none;
+  padding: 4px 10px;
+  -webkit-box-shadow: 0px 2px 1px 0px #004477;
+  box-shadow: 0px 2px 1px 0px #004477;
+  border-radius: 3px;
+  font: 700 17px/21px 'PT Sans Narrow', Arial, Helvetica, sans-serif;
+  text-shadow: 1px 1px 1px #004477;
+  margin-top: -2px;
+}
+
+/* line 630, app/assets/stylesheets/mobile/mobile.css.scss */
+.col2 button {
+  float: right;
+}
+
+/* line 631, app/assets/stylesheets/mobile/mobile.css.scss */
+.col2 .btn:hover, .col2 button:hover {
+  background: #03407d;
+}
+
+/* line 632, app/assets/stylesheets/mobile/mobile.css.scss */
+th.col2 .color {
+  color: #999;
+}
+
+/* line 633, app/assets/stylesheets/mobile/mobile.css.scss */
+table tr {
+  border-bottom: 2px solid #bfe2ff;
+}
+
+/* line 634, app/assets/stylesheets/mobile/mobile.css.scss */
+table tr td {
+  border-left: 1px solid #bfe2ff;
+  padding: 13px 5px 12px 11px;
+  font: 17px/21px 'PT Sans Narrow', Arial, Helvetica, sans-serif;
+}
+
+/* line 639, app/assets/stylesheets/mobile/mobile.css.scss */
+table tr td.col2 {
+  color: #333;
+  text-align: right;
+  padding: 12px 12px 11px 5px;
+  width: 76px;
+}
+
+/* line 645, app/assets/stylesheets/mobile/mobile.css.scss */
+table td.col3 {
+  text-align: center;
+  width: 84px;
+  padding: 11px 10px 12px 10px;
+}
+
+/* line 650, app/assets/stylesheets/mobile/mobile.css.scss */
+table td.col3 a.high, .high, .high a {
+  color: #bc0e0d;
+}
+
+/* line 651, app/assets/stylesheets/mobile/mobile.css.scss */
+table td.col3 a.high:hover, .high:hover, .high a:hover {
+  color: #f26522;
+}
+
+/* line 652, app/assets/stylesheets/mobile/mobile.css.scss */
+table td.col3 .low, .low, .low a {
+  color: #f26522;
+}
+
+/* line 653, app/assets/stylesheets/mobile/mobile.css.scss */
+table td.col3 .low:hover, .low:hover, .low a:hover {
+  color: #bc0e0d;
+}
+
+/* line 654, app/assets/stylesheets/mobile/mobile.css.scss */
+table td.col3 .good, .good, .good a {
+  color: #00a555;
+}
+
+/* line 655, app/assets/stylesheets/mobile/mobile.css.scss */
+table td.col3 .good:hover, .good:hover, .good a:hover {
+  color: #bc0e0d;
+}
+
+/* line 656, app/assets/stylesheets/mobile/mobile.css.scss */
+table td.col3 .btn {
+  background: none repeat scroll 0 0 #c5df82;
+  border: none;
+  color: #0066cc;
+  font: bold 14px/17px "PT Sans Narrow",Arial,Helvetica,sans-serif;
+  margin: 0;
+  padding: 3px 9px 1px 9px;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0px 2px 1px 0px #aace63;
+  box-shadow: 0px 2px 1px 0px #aace63;
+  border-radius: 1px;
+  text-shadow: 1px 1px 0 #fff;
+  display: inline-block;
+}
+
+/* line 670, app/assets/stylesheets/mobile/mobile.css.scss */
+table td.col2 .up,
+table td.col2 .down,
+table td.col2 .nochange {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 677, app/assets/stylesheets/mobile/mobile.css.scss */
+table td.col2 .up,
+table td.col2 .down,
+table td.col2 .nochange {
+  font-weight: bold;
+}
+
+/*table td.col2 .up:after,
+table td.col2 .down:after{
+  position:absolute;
+  right:-12px;
+  top:3px;
+  content:'';
+  background:url(/../images/sprite.png) no-repeat -93px -108px;
+  width: 8px;
+  height: 15px;
+}
+table td.col2 .down:after{
+  background-position:-108px -107px;
+  width: 7px;
+  height: 16px;
+}
+table td.col2 .nochange:after{
+  position:absolute;
+  background:#666;
+  width:5px;
+  height:3px;
+  content:'';
+  right:-11px;
+  bottom:10px;
+}*/
+/* line 706, app/assets/stylesheets/mobile/mobile.css.scss */
+table tr td.col1 {
+  border: none;
+  font: 700 17px/21px 'PT Sans Narrow', Arial, Helvetica, sans-serif;
+  width: 158px;
+}
+
+/* line 711, app/assets/stylesheets/mobile/mobile.css.scss */
+table tr td.col1 a {
+  color: #0066cc;
+}
+
+/* line 712, app/assets/stylesheets/mobile/mobile.css.scss */
+table tr td.col1 a:hover,
+.links a:hover {
+  color: #539ce4;
+}
+
+/* line 714, app/assets/stylesheets/mobile/mobile.css.scss */
+.links {
+  border-top: 1px solid #bfe2ff;
+  background: #e9f5ff;
+  padding: 18px 10px 24px;
+  text-align: center;
+  font: 700 17px/21px 'PT Sans Narrow', Arial, Helvetica, sans-serif;
+}
+
+/* line 721, app/assets/stylesheets/mobile/mobile.css.scss */
+.links a {
+  color: #0066cc;
+  margin: 0 0 0 40px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+/* line 727, app/assets/stylesheets/mobile/mobile.css.scss */
+.links a:first-child {
+  margin: 0;
+}
+
+/* line 728, app/assets/stylesheets/mobile/mobile.css.scss */
+.links a:first-child:after {
+  background: none;
+}
+
+/* line 729, app/assets/stylesheets/mobile/mobile.css.scss */
+.links a:after {
+  position: absolute;
+  content: '';
+  background: #0066cc;
+  border-radius: 100%;
+  width: 5px;
+  height: 5px;
+  left: -25px;
+  top: 10px;
+}
+
+/* line 739, app/assets/stylesheets/mobile/mobile.css.scss */
+td .temprature {
+  font: 700 17px/21px 'PT Sans Narrow', Arial, Helvetica, sans-serif;
+  color: #666;
+  position: relative;
+  text-align: center;
+  display: block;
+  padding: 14px 34px 6px;
+  /*width:180px;*/
+  margin: 0 auto;
+  top: -12px;
+}
+
+/* line 750, app/assets/stylesheets/mobile/mobile.css.scss */
+td .temprature .title {
+  display: block;
+  margin: 10px 0 0;
+  color: #000;
+}
+
+/*td .temprature:before{
+  position:absolute;
+  content:'';
+  background:url(/../images/sprite.png) no-repeat -114px -10px;
+  width: 33px;
+  height: 31px;
+  right:113px;
+  top:12px;
+}*/
+/* line 764, app/assets/stylesheets/mobile/mobile.css.scss */
+tr .slide {
+  padding: 7px 20px 20px;
+}
+
+/*td .temprature.cloudy:before{
+  background-position: -12px -68px;
+  width: 42px;
+  height: 23px;
+}
+td .temprature.snow:before{
+  background-position:-111px -63px;
+  width: 35px;
+  height: 33px;
+}
+td .temprature.sunny:before{
+  background-position:-5px -103px;
+  width: 40px;
+  height: 29px;
+}*/
+/* line 780, app/assets/stylesheets/mobile/mobile.css.scss */
+td .temprature .color {
+  color: #ed1c24;
+}
+
+/* line 781, app/assets/stylesheets/mobile/mobile.css.scss */
+td .temprature .color1 {
+  color: #0000ff;
+}
+
+/* line 782, app/assets/stylesheets/mobile/mobile.css.scss */
+td .temprature .color img {
+  width: 42px;
+  position: relative;
+  top: 13px;
+  margin-right: 5px;
+}
+
+/* line 788, app/assets/stylesheets/mobile/mobile.css.scss */
+td p {
+  margin: 0;
+}
+
+/* line 789, app/assets/stylesheets/mobile/mobile.css.scss */
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+  text-align: center;
+  height: 50px;
+  width: 100%;
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  /* line 798, app/assets/stylesheets/mobile/mobile.css.scss */
+  .social-media .facebook {
+    background-image: url(/assets/mobile/facebook-2x-d74c3aaf188be4b7c7d461b25557850e71c4cde0e7b075cf78605ef5880bbb03.png);
+  }
+  /* line 802, app/assets/stylesheets/mobile/mobile.css.scss */
+  #nav ul li a:after {
+    background-image: url(/assets/mobile/arrow-2x-90007a8ca42d587d575d69ae68ee2ddd682daf9229d44b087a99db54751ffd67.png);
+  }
+  /* line 806, app/assets/stylesheets/mobile/mobile.css.scss */
+  .social-media .twitter {
+    background-image: url(/assets/mobile/twitter-2x-b11dd812b40d58531c459b93cc3cc8fa9bd538bfef10e7b2783a061d9eeb17ae.png);
+  }
+}
+
+/* line 811, app/assets/stylesheets/mobile/mobile.css.scss */
+.modal {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+  display: none;
+}
+
+/* line 820, app/assets/stylesheets/mobile/mobile.css.scss */
+.modal .inner-modal {
+  width: 90%;
+  padding: 20px;
+  position: fixed;
+  top: 2%;
+  left: 50%;
+  margin-left: -45%;
+  background: #f4f4f4;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  max-height: 96%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* line 835, app/assets/stylesheets/mobile/mobile.css.scss */
+.modal #modal_close {
+  position: fixed;
+  content: '';
+  width: 30px;
+  height: 32px;
+  background: url(/assets/close-4699d37a721a911d17630a57ddfd193fe5a6c3a17702629a5efe7f78b3d0ba15.png) no-repeat;
+  top: 2.75%;
+  right: 6.5%;
+  cursor: pointer;
+}
+
+/* line 847, app/assets/stylesheets/mobile/mobile.css.scss */
+.page-loading {
+  background: rgba(255, 255, 255, 0.75);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 99999999;
+  /* :not(:required) hides this rule from IE9 and below */
+}
+
+/* line 856, app/assets/stylesheets/mobile/mobile.css.scss */
+.page-loading.show {
+  display: block;
+}
+
+/* line 861, app/assets/stylesheets/mobile/mobile.css.scss */
+.page-loading:after {
+  content: '';
+  -webkit-animation: three-quarters 1250ms infinite linear;
+  -moz-animation: three-quarters 1250ms infinite linear;
+  animation: three-quarters 1250ms infinite linear;
+  border: 8px solid #9BC531;
+  border-right-color: transparent;
+  border-radius: 16px;
+  box-sizing: border-box;
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  margin: -16px 0 0 -16px;
+  top: 50%;
+  left: 50%;
+}
+
+/* line 876, app/assets/stylesheets/mobile/mobile.css.scss */
+.spinner {
+  -webkit-animation: three-quarters 1250ms infinite linear;
+  -moz-animation: three-quarters 1250ms infinite linear;
+  animation: three-quarters 1250ms infinite linear;
+  border: 5px solid #9BC531;
+  border-right-color: transparent;
+  border-radius: 16px;
+  box-sizing: border-box;
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+
+/* line 887, app/assets/stylesheets/mobile/mobile.css.scss */
+.spinner.show {
+  display: block;
+}
+
+/* line 892, app/assets/stylesheets/mobile/mobile.css.scss */
+.spinner-holder {
+  position: relative;
+}
+
+/* line 895, app/assets/stylesheets/mobile/mobile.css.scss */
+.spinner-holder .spinner {
+  position: absolute;
+  top: 5px;
+  left: 340px;
+}
+
+/* line 899, app/assets/stylesheets/mobile/mobile.css.scss */
+.spinner-holder .spinner.top-margined {
+  top: 25px;
+}
+
+@-webkit-keyframes three-quarters {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes three-quarters {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes three-quarters {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes three-quarters {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/* line 913, app/assets/stylesheets/mobile/mobile.css.scss */
+.river_table .col2 {
+  min-width: 80px;
+}
+
+/* line 915, app/assets/stylesheets/mobile/mobile.css.scss */
+.river_table .col2 .ft {
+  display: none;
+}
+
+/* line 920, app/assets/stylesheets/mobile/mobile.css.scss */
+.river_table .col2.tog .ft {
+  display: block;
+}
+
+/* line 924, app/assets/stylesheets/mobile/mobile.css.scss */
+.river_table .col2.tog .cfs {
+  display: none;
+}
+
+/* line 931, app/assets/stylesheets/mobile/mobile.css.scss */
+.pagination {
+  font-size: 25px;
+  text-align: center;
+}
+
+/* line 935, app/assets/stylesheets/mobile/mobile.css.scss */
+.pagination span {
+  display: inline-block;
+  margin: 10px;
+}
+
+/* line 941, app/assets/stylesheets/mobile/mobile.css.scss */
+#search_form {
+  margin-top: 10px;
+}
+
+/* line 945, app/assets/stylesheets/mobile/mobile.css.scss */
+#search_form .spinner.show {
+  display: inline-block;
+  margin: 15px 0 0 20px;
+}
+
+/* line 952, app/assets/stylesheets/mobile/mobile.css.scss */
+input[type=text],
+input[type=password],
+input[type=search],
+input[type=file],
+input[type=email],
+input[type=tel],
+textarea, select {
+  display: inline-block;
+  max-width: 300px;
+  width: 100%;
+  background: #fdfdfd;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 5px 7px;
+  color: #999;
+  height: 50px;
+  font: 700 18px / 26px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+}
+
+/* line 972, app/assets/stylesheets/mobile/mobile.css.scss */
+.g-recaptcha {
+  margin-bottom: 20px;
+}
+
+/* line 976, app/assets/stylesheets/mobile/mobile.css.scss */
+textarea {
+  height: 125px;
+  resize: vertical;
+}
+
+/* line 981, app/assets/stylesheets/mobile/mobile.css.scss */
+.error {
+  color: red;
+}
+
+/* line 985, app/assets/stylesheets/mobile/mobile.css.scss */
+.ckeditor {
+  margin-bottom: 20px;
+}
+
+/* line 988, app/assets/stylesheets/mobile/mobile.css.scss */
+.ckeditor .error {
+  margin-top: 5px;
+}
+
+/* line 993, app/assets/stylesheets/mobile/mobile.css.scss */
+.boolean {
+  margin-bottom: 10px;
+}
+
+/* line 997, app/assets/stylesheets/mobile/mobile.css.scss */
+input.btn, .form-actions input, .btn {
+  background: #c5df82;
+  text-align: center;
+  border: none;
+  border-bottom: 3px solid #aace63;
+  border-radius: 3px;
+  color: #06c;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 8px 20px 0;
+  font: 700 16px / 21px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
+}
+
+/* line 8, lib/assets/stylesheets/bourbon/css3/_placeholder.scss */
+input::-webkit-input-placeholder {
+  font-weight: normal;
+  color: #bbb;
+}
+
+/* line 14, lib/assets/stylesheets/bourbon/css3/_placeholder.scss */
+input:-moz-placeholder {
+  font-weight: normal;
+  color: #bbb;
+}
+
+/* line 19, lib/assets/stylesheets/bourbon/css3/_placeholder.scss */
+input::-moz-placeholder {
+  font-weight: normal;
+  color: #bbb;
+}
+
+/* line 24, lib/assets/stylesheets/bourbon/css3/_placeholder.scss */
+input:-ms-input-placeholder {
+  font-weight: normal;
+  color: #bbb;
+}
+
+/* line 1019, app/assets/stylesheets/mobile/mobile.css.scss */
+.form-inputs input[type=text],
+.form-inputs input[type=password],
+.form-inputs input[type=search],
+.form-inputs input[type=file],
+.form-inputs input[type=email],
+.form-inputs input[type=tel],
+.form-inputs textarea, .form-inputs select {
+  display: block;
+}
+
+/* line 1030, app/assets/stylesheets/mobile/mobile.css.scss */
+.gen-pad {
+  padding: 10px 10px;
+}
+
+/* line 1034, app/assets/stylesheets/mobile/mobile.css.scss */
+.ui-slider {
+  background: #ddd;
+  height: 10px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 4px;
+  position: relative;
+}
+
+/* line 1042, app/assets/stylesheets/mobile/mobile.css.scss */
+.ui-slider .ui-slider-range {
+  background: #9BC531;
+  height: 10px;
+  position: absolute;
+}
+
+/* line 1048, app/assets/stylesheets/mobile/mobile.css.scss */
+.ui-slider .ui-slider-handle {
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  background: #bbb;
+  margin: -2px 0 0 -7px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* line 1057, app/assets/stylesheets/mobile/mobile.css.scss */
+.ui-slider .ui-slider-handle:hover {
+  text-decoration: none;
+}
+
+/* line 1061, app/assets/stylesheets/mobile/mobile.css.scss */
+.ui-slider .ui-slider-handle:after {
+  content: "Low";
+  color: #bc0e0d;
+  font-size: 14px;
+  width: 50px;
+  display: block;
+  background: #eee;
+  border-radius: 4px;
+  text-align: center;
+  bottom: -20px;
+  left: -15px;
+  position: relative;
+}
+
+/* line 1074, app/assets/stylesheets/mobile/mobile.css.scss */
+.ui-slider .ui-slider-handle:focus {
+  outline: none;
+}
+
+/* line 1079, app/assets/stylesheets/mobile/mobile.css.scss */
+.ui-slider .ui-slider-handle:last-of-type:after {
+  content: "High";
+}
+
+/* line 1086, app/assets/stylesheets/mobile/mobile.css.scss */
+.condition {
+  margin-bottom: 70px;
+}
+
+/* line 1089, app/assets/stylesheets/mobile/mobile.css.scss */
+.condition input {
+  display: inline-block !important;
+  width: 75px !important;
+  top: 10px;
+  position: relative;
+}
+
+/* line 1095, app/assets/stylesheets/mobile/mobile.css.scss */
+.condition input:first-of-type {
+  margin-left: 25px;
+}
+
+/* line 1101, app/assets/stylesheets/mobile/mobile.css.scss */
+.post {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #eee;
+}
+
+/* line 1106, app/assets/stylesheets/mobile/mobile.css.scss */
+.post:last-child {
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* line 1112, app/assets/stylesheets/mobile/mobile.css.scss */
+.post .created-date {
+  text-align: right;
+  font-size: 12px;
+  color: #bbb;
+}
+
+/* line 1119, app/assets/stylesheets/mobile/mobile.css.scss */
+.alert {
+  color: white;
+  padding: 10px 30px 10px 10px;
+  position: relative;
+  line-height: 20px;
+}
+
+/* line 1125, app/assets/stylesheets/mobile/mobile.css.scss */
+.alert.alert-success {
+  background: #aace63;
+}
+
+/* line 1129, app/assets/stylesheets/mobile/mobile.css.scss */
+.alert.alert-error {
+  background: red;
+}
+
+/* line 1133, app/assets/stylesheets/mobile/mobile.css.scss */
+.alert .alert-close {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-size: 35px;
+  line-height: 35px;
+  color: #0066cc;
+}
+
+/* line 1140, app/assets/stylesheets/mobile/mobile.css.scss */
+.alert .alert-close:hover {
+  color: #003366;
+}
+
+/* line 1149, app/assets/stylesheets/mobile/mobile.css.scss */
+.social-network .frame em, .social-network .frame .link {
+  font: 24px / 20px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  color: #fff;
+  float: left;
+  padding: 10px 10px 0 25px;
+}
+
+/* line 1156, app/assets/stylesheets/mobile/mobile.css.scss */
+.social-network .frame ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 -4px;
+  float: left;
+  width: 118px;
+}
+
+/* line 1162, app/assets/stylesheets/mobile/mobile.css.scss */
+.social-network .frame ul li {
+  float: left;
+  padding: 0 0 5px 7px;
+}
+
+/* line 1165, app/assets/stylesheets/mobile/mobile.css.scss */
+.social-network .frame ul li a {
+  background: url(/assets/sprite-76fcb7d477e053d8ab0201036317a7823eb0e16f41ca2437ca726a6aa520cc0c.png) no-repeat;
+  width: 32px;
+  height: 32px;
+  text-indent: -9999px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 1173, app/assets/stylesheets/mobile/mobile.css.scss */
+.social-network .frame ul li a.twitter {
+  background-position: -40px 0;
+}
+
+/* line 1176, app/assets/stylesheets/mobile/mobile.css.scss */
+.social-network .frame ul li a.linkedin {
+  background-position: -80px 0;
+}
+
+/* line 1183, app/assets/stylesheets/mobile/mobile.css.scss */
+.social-network strong {
+  font: 18px / 20px "PT Sans Narrow", Arial, Helvetica, sans-serif;
+  color: #ccc;
+}
+
+/* line 1186, app/assets/stylesheets/mobile/mobile.css.scss */
+.social-network strong a {
+  color: #7bcfff;
+  text-decoration: none;
+}
+
+/* line 1189, app/assets/stylesheets/mobile/mobile.css.scss */
+.social-network strong a:hover {
+  text-decoration: underline;
+}
+
+/* line 1196, app/assets/stylesheets/mobile/mobile.css.scss */
+.hint {
+  margin-top: -20px;
+  display: block;
+  font-size: 12px;
+  margin-bottom: 20px;
+  color: gray;
+}
+
+/* line 1204, app/assets/stylesheets/mobile/mobile.css.scss */
+.helper-text {
+  margin-top: 10px;
+  color: #555;
+}
+
+/* line 1209, app/assets/stylesheets/mobile/mobile.css.scss */
+#add_river_result {
+  margin: 20px 0;
+}
+
+/* line 1212, app/assets/stylesheets/mobile/mobile.css.scss */
+#add_river_result:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+/* line 1221, app/assets/stylesheets/mobile/mobile.css.scss */
+#add_river_result .river {
+  padding: 15px 0;
+  width: 100%;
+  float: left;
+  border-bottom: 1px solid #bbb;
+}
+
+/* line 1227, app/assets/stylesheets/mobile/mobile.css.scss */
+#add_river_result .river:first-of-type {
+  border-top: 1px solid #bbb;
+}
+
+/* line 1232, app/assets/stylesheets/mobile/mobile.css.scss */
+#add_river_result .name {
+  font-size: 20px;
+}
+
+/* line 1236, app/assets/stylesheets/mobile/mobile.css.scss */
+#add_river_result .form-holder {
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* line 1240, app/assets/stylesheets/mobile/mobile.css.scss */
+#add_river_result .form-holder input {
+  margin-bottom: 0 !important;
+}
+
+/* line 1245, app/assets/stylesheets/mobile/mobile.css.scss */
+#add_river_result .delete {
+  display: inline-block;
+  float: left;
+}
+
+/* line 1250, app/assets/stylesheets/mobile/mobile.css.scss */
+#add_river_result .drag-handle {
+  display: inline-block;
+  cursor: crosshair;
+  float: right;
+}
+
+/* line 1257, app/assets/stylesheets/mobile/mobile.css.scss */
+.sortable-placeholder {
+  float: left;
+  background: #dedede;
+  width: 100%;
+  height: 50px;
+  position: relative;
+}
+
+/* line 1264, app/assets/stylesheets/mobile/mobile.css.scss */
+.sortable-placeholder:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: 50px;
+  content: 'Drop Here';
+  font-size: 22px;
+  text-align: center;
+  color: #999;
+}
+
+/* line 1277, app/assets/stylesheets/mobile/mobile.css.scss */
+.river-condition-form h2, .river-condition-form h3 {
+  margin: 0;
+  line-height: 1.3;
+  font-size: 20px;
+}
+
+/* line 1283, app/assets/stylesheets/mobile/mobile.css.scss */
+.river-condition-form p {
+  font-size: 18px;
+  margin: 25px 0 5px;
+}
+
+/* line 1288, app/assets/stylesheets/mobile/mobile.css.scss */
+.river-condition-form .row {
+  margin: 30px 0;
+}
+
+/* line 1293, app/assets/stylesheets/mobile/mobile.css.scss */
+.river-condition-form .row .right.condition {
+  margin-bottom: 40px;
+}
+
+/* line 1295, app/assets/stylesheets/mobile/mobile.css.scss */
+.river-condition-form .row .right input {
+  margin-left: 0 !important;
+}
+
+/* line 1302, app/assets/stylesheets/mobile/mobile.css.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 1306, app/assets/stylesheets/mobile/mobile.css.scss */
+.forgot_password {
+  float: right;
+  top: 4px;
+  position: relative;
+}
+
+/* line 1312, app/assets/stylesheets/mobile/mobile.css.scss */
+.user_remember_me {
+  float: left;
+}
+
+/* line 1316, app/assets/stylesheets/mobile/mobile.css.scss */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 1322, app/assets/stylesheets/mobile/mobile.css.scss */
+.simple_form.new_user {
+  max-width: 300px;
+}
+
+/* line 1326, app/assets/stylesheets/mobile/mobile.css.scss */
+.social-links {
+  margin-top: 0;
+}
+
+/* line 1329, app/assets/stylesheets/mobile/mobile.css.scss */
+.social-links img {
+  margin: 5px;
+}
+
+/* line 1332, app/assets/stylesheets/mobile/mobile.css.scss */
+.social-links img:first-child {
+  margin-left: 0;
+}
+
+/* line 1338, app/assets/stylesheets/mobile/mobile.css.scss */
+.less-margin {
+  margin: 8px 0;
+}
+
+/* line 1342, app/assets/stylesheets/mobile/mobile.css.scss */
+.contact-details {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* line 1346, app/assets/stylesheets/mobile/mobile.css.scss */
+.contact-details h3 {
+  margin-bottom: 5px;
+}
+
+/* line 1350, app/assets/stylesheets/mobile/mobile.css.scss */
+.contact-details .city {
+  margin-bottom: 5px;
+}
+
+/* line 1354, app/assets/stylesheets/mobile/mobile.css.scss */
+.contact-details .heading {
+  margin: 20px 0 10px;
+}
+
+/* line 1359, app/assets/stylesheets/mobile/mobile.css.scss */
+.footer-text {
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* line 1366, app/assets/stylesheets/mobile/mobile.css.scss */
+.addthis_sharing_toolbox .addthis_16x16_style a.at-share-btn {
+  height: 32px;
+  width: 32px;
+  max-width: none;
+  max-height: none;
+  margin: 0 5px;
+}
+
+/* line 1373, app/assets/stylesheets/mobile/mobile.css.scss */
+.addthis_sharing_toolbox .addthis_16x16_style a.at-share-btn span.at4-icon {
+  height: 32px;
+  width: 32px;
+  line-height: 32px;
+  background-size: 32px !important;
+}
+
+/* line 1380, app/assets/stylesheets/mobile/mobile.css.scss */
+.addthis_sharing_toolbox .addthis_16x16_style a.at-share-btn:after {
+  display: none;
+}
+
+@media (max-width: 350px) {
+  /* line 1388, app/assets/stylesheets/mobile/mobile.css.scss */
+  .tempreture-holder .left {
+    width: 40%;
+  }
+  /* line 1391, app/assets/stylesheets/mobile/mobile.css.scss */
+  .tempreture-holder .right {
+    width: 60%;
+  }
+  /* line 1395, app/assets/stylesheets/mobile/mobile.css.scss */
+  .weather-record tr td.col1 {
+    padding-left: 4px;
+  }
+  /* line 1399, app/assets/stylesheets/mobile/mobile.css.scss */
+  .right .degree {
+    top: 0;
+  }
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
