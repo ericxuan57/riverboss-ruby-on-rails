@@ -52,6 +52,8 @@ gem 'mobile-fu'
 # Nokogiri for XML parsing
 gem 'nokogiri'
 
+gem "omniauth-rails_csrf_protection"
+
 # Omniauth facebook support
 gem 'omniauth-facebook'
 
